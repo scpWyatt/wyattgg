@@ -1,0 +1,62 @@
+{
+  "sonnet": {
+    "id": "sonnet",
+    "term": "Sonnet",
+    "pronunciation": "/ˈsɒnɪt/",
+    "definition": "A 14-line poem with a specific rhyme scheme and meter, typically written in iambic pentameter.",
+    "example": "Shakespeare's 'Sonnet 18' begins 'Shall I compare thee to a summer's day?'",
+    "whyUseIt": "Sonnets provide a structured form for exploring complex emotions and ideas with precision and elegance.",
+    "howToUseIt": "Follow the 14-line structure with the appropriate rhyme scheme (Petrarchan: ABBA ABBA CDE CDE, or Shakespearean: ABAB CDCD EFEF GG).",
+    "category": "Form",
+    "relatedTerms": ["iambic-pentameter", "rhyme-scheme", "petrarchan-sonnet"],
+    "etymology": "From Italian 'sonetto', meaning 'little song'"
+  },
+  "haiku": {
+    "id": "haiku",
+    "term": "Haiku",
+    "pronunciation": "/ˈhaɪkuː/",
+    "definition": "A traditional Japanese poem consisting of three lines with a 5-7-5 syllable pattern.",
+    "example": "An old silent pond / A frog jumps into the pond— / Splash! Silence again.",
+    "whyUseIt": "Haiku capture moments of insight and natural beauty with economy and precision.",
+    "howToUseIt": "Write three lines with exactly 5, 7, and 5 syllables respectively, often focusing on nature and seasonal themes.",
+    "category": "Form",
+    "relatedTerms": ["syllable", "nature-poetry", "japanese-forms"],
+    "etymology": "From Japanese 'haiku', meaning 'light verse'"
+  },
+  "iambic-pentameter": {
+    "id": "iambic-pentameter",
+    "term": "Iambic Pentameter",
+    "pronunciation": "/aɪˌæmbɪk pɛnˈtæmɪtər/",
+    "definition": "A metrical pattern consisting of five iambic feet per line, where each foot contains an unstressed syllable followed by a stressed syllable.",
+    "example": "Shall I compare thee to a summer's day?",
+    "whyUseIt": "Iambic pentameter creates a natural, speech-like rhythm that closely mimics human speech patterns.",
+    "howToUseIt": "Write lines with ten syllables, alternating between unstressed and stressed syllables (da-DUM da-DUM da-DUM da-DUM da-DUM).",
+    "category": "Meter",
+    "relatedTerms": ["iamb", "pentameter", "meter"],
+    "etymology": "From Greek 'iambos' (iambic foot) and 'pente' (five) + 'metron' (measure)"
+  },
+  "metaphor": {
+    "id": "metaphor",
+    "term": "Metaphor",
+    "pronunciation": "/ˈmɛtəfɔːr/",
+    "definition": "A figure of speech that directly refers to one thing by mentioning another, implying a comparison without using 'like' or 'as'.",
+    "example": "The world is a stage where everyone plays a part.",
+    "whyUseIt": "Metaphors create vivid imagery and make abstract ideas more relatable by linking them to familiar concepts.",
+    "howToUseIt": "Use a metaphor to draw a direct comparison between two unrelated things to highlight a particular quality or aspect of one of them.",
+    "category": "Figurative Language",
+    "relatedTerms": ["simile", "analogy", "imagery"],
+    "etymology": "From the Greek word 'metaphora' meaning 'a transfer'; derived from 'meta' (over, across) and 'pherein' (to carry)."
+  },
+  "alliteration": {
+    "id": "alliteration",
+    "term": "Alliteration",
+    "pronunciation": "/əˌlɪtəˈreɪʃən/",
+    "definition": "The repetition of the same consonant sounds at the beginning of closely connected words.",
+    "example": "The wild winds whisked the willows wildly.",
+    "whyUseIt": "Alliteration creates rhythm and musicality in writing, making it more memorable and engaging.",
+    "howToUseIt": "Repeat consonant sounds at the start of nearby words to enhance the poetic quality and create a musical effect.",
+    "category": "Sound Devices",
+    "relatedTerms": ["assonance", "consonance", "rhyme"],
+    "etymology": "From the Latin 'ad' (to) and 'littera' (letter), meaning 'according to the letter.'"
+  }
+} 

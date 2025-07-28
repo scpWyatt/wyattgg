@@ -122,6 +122,28 @@ export default function WritingExercisesLanding() {
                         </div>
                     </div>
 
+                    {/* Poetry Section */}
+                    <div className="space-y-6 mb-12">
+                        <h2 className="text-2xl font-semibold text-white">Poetry Studies</h2>
+                        <div className="flex justify-center">
+                            <Link 
+                                href="/poetry" 
+                                className="block bg-gradient-to-br from-pink-900 to-purple-900 p-4 sm:p-6 rounded-lg 
+                                         hover:from-pink-800 hover:to-purple-800 transition-all transform 
+                                         hover:scale-[1.02] border-2 border-pink-500/20 hover:border-pink-500/40 
+                                         shadow-xl max-w-xl w-full"
+                            >
+                                <div className="flex items-center gap-3 justify-center">
+                                    <span className="text-3xl">📜</span>
+                                    <div>
+                                        <h3 className="text-xl font-bold text-white mb-1">Poetry Flashcards</h3>
+                                        <p className="text-gray-300 text-sm">Study poets, poems, and poetic terms</p>
+                                    </div>
+                                </div>
+                            </Link>
+                        </div>
+                    </div>
+
                     {/* Flashcards Section */}
                     <div className="space-y-6">
                         <h2 className="text-2xl font-semibold text-white">Study with Flashcards</h2>

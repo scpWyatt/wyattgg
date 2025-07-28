@@ -1,0 +1,141 @@
+{
+  "shakespeare": {
+    "id": "shakespeare",
+    "name": "William Shakespeare",
+    "dateOfBirth": "1564-04-23",
+    "dateOfDeath": "1616-04-23",
+    "nationality": "English",
+    "literaryMovement": "Renaissance",
+    "notableWorks": [
+      {
+        "title": "Sonnet 18",
+        "publicationYear": "1609",
+        "type": "Poetry"
+      },
+      {
+        "title": "Hamlet",
+        "publicationYear": "1603",
+        "type": "Play"
+      },
+      {
+        "title": "Romeo and Juliet",
+        "publicationYear": "1597",
+        "type": "Play"
+      },
+      {
+        "title": "Macbeth",
+        "publicationYear": "1623",
+        "type": "Play"
+      }
+    ],
+    "keyLifeEvents": [
+      {
+        "year": "1582",
+        "event": "Married Anne Hathaway",
+        "significance": "Personal life milestone"
+      },
+      {
+        "year": "1594",
+        "event": "Joined Lord Chamberlain's Men",
+        "significance": "Professional breakthrough"
+      },
+      {
+        "year": "1599",
+        "event": "Globe Theatre opened",
+        "significance": "Venue for many of his plays"
+      },
+      {
+        "year": "1609",
+        "event": "Published Sonnets",
+        "significance": "Major contribution to English poetry"
+      }
+    ],
+    "briefBio": "Often called England's national poet and the 'Bard of Avon', Shakespeare is widely regarded as the greatest writer in the English language."
+  },
+  "wordsworth": {
+    "id": "wordsworth",
+    "name": "William Wordsworth",
+    "dateOfBirth": "1770-04-07",
+    "dateOfDeath": "1850-04-23",
+    "nationality": "English",
+    "literaryMovement": "Romanticism",
+    "notableWorks": [
+      {
+        "title": "I Wandered Lonely as a Cloud",
+        "publicationYear": "1807",
+        "type": "Poetry"
+      },
+      {
+        "title": "The Prelude",
+        "publicationYear": "1850",
+        "type": "Poetry"
+      },
+      {
+        "title": "Lyrical Ballads",
+        "publicationYear": "1798",
+        "type": "Poetry"
+      },
+      {
+        "title": "Tintern Abbey",
+        "publicationYear": "1798",
+        "type": "Poetry"
+      }
+    ],
+    "keyLifeEvents": [
+      {
+        "year": "1798",
+        "event": "Published Lyrical Ballads with Coleridge",
+        "significance": "Marked the beginning of English Romanticism"
+      },
+      {
+        "year": "1843",
+        "event": "Became Poet Laureate",
+        "significance": "Official recognition of his contribution to poetry"
+      }
+    ],
+    "briefBio": "A major English Romantic poet who helped launch the Romantic Age in English literature with his publication of Lyrical Ballads."
+  },
+  "dickinson": {
+    "id": "dickinson",
+    "name": "Emily Dickinson",
+    "dateOfBirth": "1830-12-10",
+    "dateOfDeath": "1886-05-15",
+    "nationality": "American",
+    "literaryMovement": "Romanticism",
+    "notableWorks": [
+      {
+        "title": "Because I could not stop for Death",
+        "publicationYear": "1890",
+        "type": "Poetry"
+      },
+      {
+        "title": "I heard a Fly buzz - when I died",
+        "publicationYear": "1896",
+        "type": "Poetry"
+      },
+      {
+        "title": "Hope is the thing with feathers",
+        "publicationYear": "1891",
+        "type": "Poetry"
+      }
+    ],
+    "keyLifeEvents": [
+      {
+        "year": "1850s",
+        "event": "Began writing poetry seriously",
+        "significance": "Development of her unique style"
+      },
+      {
+        "year": "1860s",
+        "event": "Most productive period",
+        "significance": "Wrote over 800 poems"
+      },
+      {
+        "year": "1890",
+        "event": "First collection published posthumously",
+        "significance": "Recognition of her work after death"
+      }
+    ],
+    "briefBio": "An American poet who lived in isolation and wrote nearly 1,800 poems, most of which were discovered after her death."
+  }
+} 
