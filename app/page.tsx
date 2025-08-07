@@ -32,6 +32,31 @@ type PageInfo = {
     icon: React.ElementType;
 };
 
+const getBrandStyles = (title: string) => {
+    switch (title) {
+        case "YouTube":
+            return {
+                overlay: "from-[#ff0033]/20 via-[#ff6b6b]/10 to-transparent",
+                icon: "text-[#ff4d5f] group-hover:text-[#ff7380]",
+            } as const;
+        case "Discord":
+            return {
+                overlay: "from-[#5865F2]/20 via-[#8ea2ff]/10 to-transparent",
+                icon: "text-[#8ea2ff] group-hover:text-[#b2bfff]",
+            } as const;
+        case "Twitter":
+            return {
+                overlay: "from-[#e6e6e6]/20 via-[#9ca3af]/10 to-transparent",
+                icon: "text-zinc-300 group-hover:text-white",
+            } as const;
+        default:
+            return {
+                overlay: "from-blue-500/15 via-purple-500/10 to-transparent",
+                icon: "text-zinc-300 group-hover:text-white",
+            } as const;
+    }
+};
+
 // const internalLinks: PageInfo[] = [
 //     {
 //         title: "Writing Exercises",
@@ -64,78 +89,104 @@ const externalLinks: PageInfo[] = [
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 text-white">
-            <main className="max-w-4xl mx-auto px-4 py-8 sm:py-16 sm:px-6 lg:px-8">
-                <div className="bg-gray-800/50 rounded-lg p-4 sm:p-8 backdrop-blur-sm">
-                    {/* Hero Section */}
-                    <div className="text-center mb-12">
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
-                            Welcome to{" "}
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-                                Wyatt.gg
-                            </span>
-                        </h1>
-                        <p className="text-lg sm:text-xl text-gray-300 mb-8">
-                            Voice Over Artist | Content Creator | Game Enthusiast
-                        </p>
-                        <Link
-                            href="/contact"
-                            className="inline-flex items-center px-6 py-3 text-lg font-bold rounded-lg 
-                                     bg-gradient-to-r from-blue-600 to-purple-600 
-                                     hover:from-blue-500 hover:to-purple-500
-                                     shadow-lg hover:shadow-xl transition-all duration-300 
-                                     hover:scale-[1.02]"
-                        >
-                            Get in Touch
-                            <ArrowRightIcon className="ml-2 -mr-1 h-6 w-6" aria-hidden="true" />
-                        </Link>
-                    </div>
+        <div className="relative min-h-screen overflow-hidden bg-neutral-950 text-white">
+            {/* Decorative background */}
+            <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
+                {/* Base colorful gradient (fallback, always visible) */}
+                <div className="absolute inset-0 bg-gradient-to-b from-[#05060b] via-[#0b1220] to-black" />
+                {/* Subtle grid */}
+                <div className="absolute inset-0 opacity-60 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:22px_22px]" />
+                {/* Conic color wash with vendor-prefixed mask fallback */}
+                <div className="absolute inset-0 opacity-30 blur-3xl bg-[conic-gradient(at_20%_20%,#0ea5e9_0deg,#8b5cf6_120deg,#f43f5e_240deg,#0ea5e9_360deg)] [mask-image:radial-gradient(ellipse_at_center,black,transparent_65%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black,transparent_65%)]" />
+                {/* Color mesh (visible without masking to ensure effect shows) */}
+                <div className="absolute inset-0 opacity-35 bg-[radial-gradient(1200px_800px_at_10%_0%,rgba(14,165,233,0.18),transparent_60%),radial-gradient(1000px_700px_at_90%_20%,rgba(168,85,247,0.16),transparent_55%),radial-gradient(1200px_900px_at_50%_100%,rgba(244,63,94,0.12),transparent_60%)]" />
+                {/* Aurora blobs */}
+                <div className="absolute -top-32 right-1/4 h-72 w-72 rounded-full bg-purple-600/20 blur-3xl" />
+                <div className="absolute -bottom-24 left-1/3 h-80 w-80 rounded-full bg-blue-600/20 blur-3xl" />
+                <div className="absolute top-1/3 -left-24 h-64 w-64 rounded-full bg-fuchsia-500/15 blur-2xl" />
+                <div className="absolute bottom-1/4 right-10 h-48 w-48 rounded-full bg-cyan-400/10 blur-2xl" />
+            </div>
 
-                    {/* Featured Section */}
-                    <div className="space-y-8">
-                        <div>
-                            <h2 className="text-2xl font-semibold text-white mb-4">Featured</h2>
+            <main className="relative z-10 mx-auto max-w-6xl px-4 py-12 sm:py-20 sm:px-6 lg:px-8">
+                {/* Glass panel wrapper with gradient border */}
+                <div className="relative rounded-2xl p-[1px] bg-gradient-to-b from-white/15 via-white/5 to-transparent shadow-2xl shadow-black/40">
+                    <div className="rounded-2xl bg-white/5 backdrop-blur-xl">
+                        {/* Hero Section */}
+                        <div className="px-4 sm:px-8 pt-10 sm:pt-14 pb-10 sm:pb-12 text-center">
+                            <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-zinc-300">
+                                <span className="inline-block h-2 w-2 rounded-full bg-emerald-400/90" />
+                                Voice Over • Content Creator
+                            </div>
+                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
+                                <span className="text-white/90">Welcome to </span>
+                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-fuchsia-400 to-purple-500">Wyatt.gg</span>
+                            </h1>
+                            <p className="mx-auto max-w-2xl text-base sm:text-lg text-zinc-300/90">
+                                Voice Over Artist, Content Creator, and lifelong game enthusiast. Explore tools, projects, and ways to connect.
+                            </p>
+                            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+                                <Link
+                                    href="/contact"
+                                    className="group relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 px-6 py-3 text-base font-semibold shadow-lg shadow-blue-900/40 transition-all hover:from-fuchsia-500 hover:via-purple-500 hover:to-indigo-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/50"
+                                >
+                                    <span className="absolute -inset-1 -z-10 rounded-full opacity-30 blur-xl transition-opacity group-hover:opacity-50 bg-[radial-gradient(circle_at_30%_30%,#60a5fa,transparent_45%),radial-gradient(circle_at_70%_70%,#a78bfa,transparent_45%)]" />
+                                    Get in Touch
+                                    <ArrowRightIcon className="h-5 w-5" aria-hidden="true" />
+                                </Link>
+                                <Link
+                                    href="/writing-exercises"
+                                    className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-gradient-to-r from-white/5 via-white/0 to-white/5 px-6 py-3 text-base font-semibold text-white/90 transition hover:bg-white/10 hover:from-white/10 hover:to-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
+                                >
+                                    Explore Writing Tools
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* Featured Section */}
+                        <div className="px-4 sm:px-8 pb-10 sm:pb-12">
+                            <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Featured</h2>
                             <Link
                                 href="/writing-exercises"
-                                className="block bg-gradient-to-br from-green-900 to-teal-900 p-4 sm:p-6 rounded-lg 
-                                         hover:from-green-800 hover:to-teal-800 transition-all transform 
-                                         hover:scale-[1.02] border-2 border-green-500/20 hover:border-green-500/40
-                                         shadow-xl"
+                                className="group relative block rounded-xl p-[1px] bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-transparent transition-transform duration-300 hover:translate-y-[-2px]"
                             >
-                                <div className="flex items-center gap-3">
-                                    <div className="bg-green-500/10 p-3 rounded-lg">
-                                        <BookOpenIcon className="h-8 w-8 text-green-400" />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-xl font-bold text-white mb-1">Writing Exercises</h3>
-                                        <p className="text-gray-300 text-sm">Interactive tools to improve your writing skills</p>
+                                <div className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl">
+                                    <div className="pointer-events-none absolute -inset-24 opacity-20 blur-2xl bg-[conic-gradient(at_50%_50%,#22d3ee_0deg,#2dd4bf_90deg,#a78bfa_180deg,#f472b6_270deg,#22d3ee_360deg)]" />
+                                    <div className="flex items-center gap-4">
+                                        <div className="rounded-lg bg-emerald-400/15 p-3 ring-1 ring-inset ring-emerald-300/20">
+                                            <BookOpenIcon className="h-8 w-8 text-emerald-300" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-lg sm:text-xl font-bold text-white mb-1">Writing Exercises</h3>
+                                            <p className="text-sm text-zinc-300">Interactive tools to sharpen your storytelling and creativity.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </Link>
                         </div>
 
                         {/* Connect Section */}
-                        <div>
-                            <h2 className="text-2xl font-semibold text-white mb-4">Connect With Me</h2>
+                        <div className="px-4 sm:px-8 pb-10 sm:pb-12">
+                            <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Connect With Me</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                                {externalLinks.map((link) => (
-                                    <a
-                                        key={link.title}
-                                        href={link.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="block bg-gradient-to-br from-gray-800 to-gray-900 p-4 rounded-lg 
-                                                 hover:from-gray-700 hover:to-gray-800 transition-all transform 
-                                                 hover:scale-[1.02] border border-gray-700 hover:border-gray-600
-                                                 shadow-lg"
-                                    >
-                                        <div className="flex flex-col items-center text-center">
-                                            <link.icon className="h-8 w-8 text-gray-400 mb-2" />
-                                            <h3 className="font-medium text-white">{link.title}</h3>
-                                            <p className="text-sm text-gray-400">{link.description}</p>
-                                        </div>
-                                    </a>
-                                ))}
+                                {externalLinks.map((link) => {
+                                    const brand = getBrandStyles(link.title);
+                                    return (
+                                        <a
+                                            key={link.title}
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 transition-all duration-300 hover:bg-white/10 hover:shadow-xl hover:shadow-black/30"
+                                        >
+                                            <div className={`pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-tr ${brand.overlay}`} />
+                                            <div className="relative flex flex-col items-center text-center">
+                                                <link.icon className={`h-8 w-8 mb-2 transition-colors ${brand.icon}`} />
+                                                <h3 className="font-semibold text-white">{link.title}</h3>
+                                                <p className="text-sm text-zinc-400">{link.description}</p>
+                                            </div>
+                                        </a>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
