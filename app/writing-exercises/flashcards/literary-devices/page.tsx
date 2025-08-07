@@ -36,40 +36,51 @@ export default function LiteraryDevicesFlashcards() {
     }));
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
-            <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-                <Header
-                    title="Literary Devices Flashcards"
-                    subtitle="Master the tools and techniques of effective writing"
-                />
-                <FlashcardGame
-                    cards={cards}
-                    title="Literary Devices"
-                    subtitle="Master the tools of effective writing"
-                    config={{
-                        allowPracticeMode: true,
-                        showExamples: true,
-                        additionalFields: [
-                            "whyUseIt",
-                            "howToUseIt",
-                            "example",
-                            "derivation",
-                            "pronunciation",
-                            "school",
-                        ],
-                        reverseMode: true,
-                        showProgress: true,
-                        allowShuffle: true,
-                        subheaderField: "pronunciation",
-                        layout: {
-                            mainFields: ["whyUseIt", "howToUseIt"],
-                            secondaryFields: ["example", "derivation"],
-                            footerFields: ["school"],
-                        },
-                        hideHeader: true,
-                    }}
-                />
-            </div>
+        <div className="relative text-white">
+            <main className="relative z-10 mx-auto max-w-6xl px-4 pt-12 pb-10 sm:px-6 sm:pt-16 sm:pb-12 lg:px-8 lg:pt-16 lg:pb-10 xl:pt-14 xl:pb-12">
+                <div className="relative rounded-2xl p-[1px] bg-gradient-to-b from-white/15 via-white/5 to-transparent shadow-2xl shadow-black/40">
+                    <div className="relative rounded-2xl bg-white/5 backdrop-blur-xl overflow-visible">
+                        <div aria-hidden className="pointer-events-none absolute -inset-2 sm:-inset-3 lg:-inset-4 rounded-[1.25rem] bg-gradient-to-b from-white/10 to-transparent blur-xl opacity-30" />
+
+                        <div className="px-4 sm:px-8 pt-10 sm:pt-14 pb-6 sm:pb-8 lg:pb-6">
+                            <Header
+                                title="Literary Devices Flashcards"
+                                subtitle="Master the tools and techniques of effective writing"
+                            />
+                        </div>
+
+                        <div className="px-4 sm:px-8 pb-12 sm:pb-14 lg:pb-12 xl:pb-10">
+                            <FlashcardGame
+                                cards={cards}
+                                title="Literary Devices"
+                                subtitle="Master the tools of effective writing"
+                                config={{
+                                    allowPracticeMode: true,
+                                    showExamples: true,
+                                    additionalFields: [
+                                        "whyUseIt",
+                                        "howToUseIt",
+                                        "example",
+                                        "derivation",
+                                        "pronunciation",
+                                        "school",
+                                    ],
+                                    reverseMode: true,
+                                    showProgress: true,
+                                    allowShuffle: true,
+                                    subheaderField: "pronunciation",
+                                    layout: {
+                                        mainFields: ["whyUseIt", "howToUseIt"],
+                                        secondaryFields: ["example", "derivation"],
+                                        footerFields: ["school"],
+                                    },
+                                    hideHeader: true,
+                                }}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
     );
 }

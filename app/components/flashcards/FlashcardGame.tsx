@@ -216,15 +216,15 @@ export default function FlashcardGame({ cards, title, subtitle, config = {} }: F
         <div className="">
             {/* Top section */}
             <div className="flex justify-between items-center mb-4">
-                <div className="text-gray-300 text-sm sm:text-base">
+                <div className="text-zinc-300 text-sm sm:text-base">
                     {state.isInPracticeMode
                         ? `Reviewing card ${state.currentIndex + 1} of ${state.deck.length}`
                         : `Card ${state.currentIndex + 1} of ${state.deck.length}`}
                 </div>
                 <button
                     onClick={handleShuffle}
-                    className="px-4 py-1.5 bg-gray-700 text-white rounded 
-                             hover:bg-gray-600 transition-colors text-sm"
+                    className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-white 
+                             hover:bg-white/10 transition-colors text-sm"
                 >
                     Shuffle Deck
                 </button>
@@ -235,16 +235,16 @@ export default function FlashcardGame({ cards, title, subtitle, config = {} }: F
                 {defaultConfig.allowPracticeMode && !state.isInPracticeMode && state.isRevealed && (
                     <button
                         onClick={() => handleAddToPractice(currentCard)}
-                        className="px-6 py-2 bg-gray-600 text-white rounded 
-                                 hover:bg-gray-700 transition-colors text-base"
+                        className="px-6 py-2 rounded-full border border-white/10 bg-white/5 text-white 
+                                 hover:bg-white/10 transition-colors text-base"
                     >
                         Practice Again Later
                     </button>
                 )}
                 <button
                     onClick={state.isRevealed ? handleNext : handleReveal}
-                    className="px-6 py-2 bg-blue-600 text-white rounded 
-                             hover:bg-blue-700 transition-colors text-base"
+                    className="px-6 py-2 rounded-full bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 text-white 
+                             hover:from-sky-500 hover:via-blue-500 hover:to-indigo-500 transition-colors text-base"
                 >
                     {state.isRevealed
                         ? isLastCard
