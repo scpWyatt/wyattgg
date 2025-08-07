@@ -3,31 +3,19 @@ import { FlashcardPageShell } from "./FlashcardPageShell";
 import { FLASHCARD_CONFIGS } from "./config";
 import literaryDevicesData from "@/data/writing-exercises/flashcards/literary-devices.json";
 
-type LegacyLiteraryDevice = {
-  id: string;
-  name: string;
-  pronunciation: string;
-  definition: string;
-  whyUseIt: string;
-  howToUseIt: string;
-  school: string;
-  example: string;
-  derivation: string;
-};
-
 export default function WritingExercisesFlashcards() {
-  const cards = Object.entries(literaryDevicesData as Record<string, LegacyLiteraryDevice>).map(([id, d]) => ({
-    id,
-    term: d.name,
-    definition: d.definition,
-    example: d.example,
+  const cards = Object.entries(literaryDevicesData as unknown as Record<string, any>).map(([key, item]) => ({
+    id: item.id ?? key,
+    term: item.term ?? item.name,
+    definition: item.definition,
+    example: item.example,
     additionalInfo: {
-      pronunciation: d.pronunciation,
-      whyUseIt: d.whyUseIt,
-      howToUseIt: d.howToUseIt,
-      school: d.school,
-      derivation: d.derivation,
-      example: d.example,
+      pronunciation: item.additionalInfo?.pronunciation ?? item.pronunciation,
+      whyUseIt: item.additionalInfo?.whyUseIt ?? item.whyUseIt,
+      howToUseIt: item.additionalInfo?.howToUseIt ?? item.howToUseIt,
+      school: item.additionalInfo?.school ?? item.school,
+      derivation: item.additionalInfo?.derivation ?? item.derivation,
+      example: item.example,
     },
   }));
 
