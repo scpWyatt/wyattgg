@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRightIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
+import { CopyEmailButton } from './CopyEmailButton';
 
 export const metadata: Metadata = {
   title: 'Wyatt.gg | Contact',
@@ -29,7 +30,7 @@ export default function Contact() {
               </p>
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
-                  href="mailto:lounge_lizards@yahoo.com"
+                  href="mailto:wyatt@wyatt.gg"
                   className="group relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 px-6 py-3 text-base font-semibold shadow-lg shadow-blue-900/40 transition-all hover:from-fuchsia-500 hover:via-purple-500 hover:to-indigo-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/50"
                 >
                   <span className="absolute -inset-1 -z-10 rounded-full opacity-30 blur-xl transition-opacity group-hover:opacity-50 bg-[radial-gradient(circle_at_30%_30%,#60a5fa,transparent_45%),radial-gradient(circle_at_70%_70%,#a78bfa,transparent_45%)]" />
@@ -59,17 +60,11 @@ export default function Contact() {
                       The best way to reach me is by email. I’ll get back to you as soon as I can.
                     </p>
                   </div>
-                  <a
-                    href="mailto:lounge_lizards@yahoo.com"
-                    className="shrink-0 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/90 transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
-                  >
-                    <EnvelopeIcon className="h-4 w-4" aria-hidden="true" />
-                    Copy Email
-                  </a>
+                  <CopyEmailButton />
                 </div>
                 <div className="mt-3 break-all text-sky-300/90">
-                  <a href="mailto:lounge_lizards@yahoo.com" className="hover:text-sky-200 transition-colors duration-150">
-                    lounge_lizards@yahoo.com
+                  <a href="mailto:wyatt@wyatt.gg" className="hover:text-sky-200 transition-colors duration-150">
+                    wyatt@wyatt.gg
                   </a>
                 </div>
               </div>

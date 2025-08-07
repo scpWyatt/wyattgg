@@ -129,8 +129,9 @@ export default function Home() {
                         </div>
 
                         {/* Featured Section */}
-                        <div className="px-4 sm:px-8 pb-8 sm:pb-10 lg:pb-8 xl:pb-6">
-                            <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Featured</h2>
+                        <div className="px-4 sm:px-8 pb-12 sm:pb-14 lg:pb-12 xl:pb-10">
+                            <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white/95 mb-2">Featured</h2>
+                            <div className="h-px w-24 bg-gradient-to-r from-white/40 via-white/10 to-transparent rounded-full mb-4" />
                             <Link
                                 href="/writing-exercises"
                                 className="group relative block rounded-xl p-[1px] bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-transparent transition-transform duration-150 ease-out transform-gpu will-change-transform hover:translate-y-[-2px]"
@@ -151,8 +152,9 @@ export default function Home() {
                         </div>
 
                         {/* Connect Section */}
-                        <div className="px-4 sm:px-8 pb-6 sm:pb-8 lg:pb-6 xl:pb-4 2xl:pb-4">
-                            <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Connect With Me</h2>
+                        <div className="px-4 sm:px-8 pb-14 sm:pb-16 lg:pb-14 xl:pb-12 2xl:pb-12">
+                            <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white/95 mb-2">Connect With Me</h2>
+                            <div className="h-px w-24 bg-gradient-to-r from-white/40 via-white/10 to-transparent rounded-full mb-4" />
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 {externalLinks.map((link) => {
                                     const brand = getBrandStyles(link.title);

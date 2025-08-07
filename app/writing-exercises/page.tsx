@@ -25,8 +25,9 @@ export default function WritingExercisesLanding() {
             </div>
 
             {/* Story Structure Section */}
-            <div className="px-4 sm:px-8 pb-8 sm:pb-10 lg:pb-8 xl:pb-6">
-              <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Story Structure</h2>
+            <div className="px-4 sm:px-8 pb-12 sm:pb-14 lg:pb-12 xl:pb-10">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white/95 mb-2">Story Structure</h2>
+              <div className="h-px w-24 bg-gradient-to-r from-white/40 via-white/10 to-transparent rounded-full mb-4" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
                 <Link href="/writing-exercises/heroes-journey" className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl transition-colors duration-150 ease-out hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 transform-gpu will-change-transform hover:translate-y-[-2px]">
                   <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-150 group-hover:opacity-100 bg-gradient-to-tr from-purple-500/10 via-indigo-500/10 to-transparent" />
@@ -53,8 +54,9 @@ export default function WritingExercisesLanding() {
             </div>
 
             {/* Story Development Section */}
-            <div className="px-4 sm:px-8 pb-8 sm:pb-10 lg:pb-8 xl:pb-6">
-              <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Story Development</h2>
+            <div className="px-4 sm:px-8 pb-12 sm:pb-14 lg:pb-12 xl:pb-10">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white/95 mb-2">Story Development</h2>
+              <div className="h-px w-24 bg-gradient-to-r from-white/40 via-white/10 to-transparent rounded-full mb-4" />
               <div className="flex justify-center">
                 <Link href="/writing-exercises/but-therefore" className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl transition-colors duration-150 ease-out hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 transform-gpu will-change-transform hover:translate-y-[-2px] max-w-xl w-full">
                   <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-150 group-hover:opacity-100 bg-gradient-to-tr from-orange-500/10 via-red-500/10 to-transparent" />
@@ -70,8 +72,9 @@ export default function WritingExercisesLanding() {
             </div>
 
             {/* Literary Device Mastery Section */}
-            <div className="px-4 sm:px-8 pb-8 sm:pb-10 lg:pb-8 xl:pb-6">
-              <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Literary Device Mastery</h2>
+            <div className="px-4 sm:px-8 pb-12 sm:pb-14 lg:pb-12 xl:pb-10">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white/95 mb-2">Literary Device Mastery</h2>
+              <div className="h-px w-24 bg-gradient-to-r from-white/40 via-white/10 to-transparent rounded-full mb-4" />
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
                 <Link href="/writing-exercises/flashcards/literary-devices" className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl transition-colors duration-150 ease-out hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 transform-gpu will-change-transform hover:translate-y-[-2px]">
                   <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-150 group-hover:opacity-100 bg-gradient-to-tr from-emerald-500/10 via-lime-500/10 to-transparent" />
@@ -109,8 +112,9 @@ export default function WritingExercisesLanding() {
             </div>
 
             {/* Poetry Section */}
-            <div className="px-4 sm:px-8 pb-8 sm:pb-10 lg:pb-8 xl:pb-6">
-              <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Poetry Studies</h2>
+            <div className="px-4 sm:px-8 pb-12 sm:pb-14 lg:pb-12 xl:pb-10">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white/95 mb-2">Poetry Studies</h2>
+              <div className="h-px w-24 bg-gradient-to-r from-white/40 via-white/10 to-transparent rounded-full mb-4" />
               <div className="flex justify-center">
                 <Link href="/poetry" className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl transition-colors duration-150 ease-out hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 transform-gpu will-change-transform hover:translate-y-[-2px] max-w-xl w-full">
                   <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-150 group-hover:opacity-100 bg-gradient-to-tr from-pink-500/10 via-purple-500/10 to-transparent" />
@@ -126,8 +130,9 @@ export default function WritingExercisesLanding() {
             </div>
 
             {/* Flashcards Section */}
-            <div className="px-4 sm:px-8 pb-6 sm:pb-8 lg:pb-6 xl:pb-4 2xl:pb-4">
-              <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Study with Flashcards</h2>
+            <div className="px-4 sm:px-8 pb-12 sm:pb-14 lg:pb-12 xl:pb-10">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white/95 mb-2">Study with Flashcards</h2>
+              <div className="h-px w-24 bg-gradient-to-r from-white/40 via-white/10 to-transparent rounded-full mb-4" />
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
                 <Link href="/writing-exercises/flashcards/literary-devices" className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-4 sm:p-5 backdrop-blur-xl transition-colors duration-150 ease-out hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 transform-gpu will-change-transform hover:translate-y-[-2px]">
                   <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-150 group-hover:opacity-100 bg-gradient-to-tr from-sky-500/10 via-blue-500/10 to-transparent" />
@@ -176,8 +181,9 @@ export default function WritingExercisesLanding() {
             </div>
 
             {/* Tools Section */}
-            <div className="px-4 sm:px-8 pb-6 sm:pb-8 lg:pb-6 xl:pb-4 2xl:pb-4">
-              <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Productivity Tools</h2>
+            <div className="px-4 sm:px-8 pb-14 sm:pb-16 lg:pb-14 xl:pb-12 2xl:pb-12">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white/95 mb-2">Productivity Tools</h2>
+              <div className="h-px w-24 bg-gradient-to-r from-white/40 via-white/10 to-transparent rounded-full mb-4" />
               <div className="flex justify-center">
                 <Link href="/writing-exercises/pomodoro" className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl transition-colors duration-150 ease-out hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 transform-gpu will-change-transform hover:translate-y-[-2px] max-w-xl w-full">
                   <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-150 group-hover:opacity-100 bg-gradient-to-tr from-red-500/10 via-orange-500/10 to-transparent" />
