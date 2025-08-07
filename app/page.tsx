@@ -89,7 +89,7 @@ const externalLinks: PageInfo[] = [
 
 export default function Home() {
     return (
-        <div className="relative text-white mg-16">
+        <div className="relative text-white">
 
             <main className="relative z-10 mx-auto max-w-6xl px-4 pt-12 pb-10 sm:px-6 sm:pt-16 sm:pb-12 lg:px-8 lg:pt-16 lg:pb-10 xl:pt-14 xl:pb-8 2xl:pt-12 2xl:pb-6">
                 {/* Glass panel wrapper with gradient border */}
