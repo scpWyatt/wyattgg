@@ -2,7 +2,7 @@
 
 import { FlashcardGame } from "@/app/components/flashcards/FlashcardGame";
 import saveTheCatData from "@/data/writing-exercises/flashcards/save-the-cat.json";
-import Header from "@/app/writing-exercises/components/Header";
+import { FlashcardPageShell } from "../FlashcardPageShell";
 
 type SaveTheCatBeat = {
     id: string;
@@ -35,33 +35,27 @@ export default function SaveTheCatFlashcards() {
     }));
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
-            <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-                <Header
-                    title="Save the Cat! Flashcards"
-                    subtitle="Master Blake Snyder's 15 story beats with interactive flashcards"
-                />
-                <FlashcardGame
-                    cards={cards}
-                    title="Save the Cat!"
-                    subtitle="Master the 15 essential story beats"
-                    config={{
-                        allowPracticeMode: true,
-                        showExamples: true,
-                        additionalFields: ["purpose", "timing", "whenToUseIt", "commonVariations", "pitfalls", "example"],
-                        reverseMode: true,
-                        showProgress: true,
-                        allowShuffle: true,
-                        subheaderField: "commonVariations",
-                        layout: {
-                            mainFields: ["purpose", "whenToUseIt"],
-                            secondaryFields: ["example", "pitfalls"],
-                            footerFields: ["timing"],
-                        },
-                        hideHeader: true,
-                    }}
-                />
-            </div>
-        </div>
+        <FlashcardPageShell title="Save the Cat! Flashcards" subtitle="Master Blake Snyder's 15 story beats with interactive flashcards">
+            <FlashcardGame
+                cards={cards}
+                title="Save the Cat!"
+                subtitle="Master the 15 essential story beats"
+                config={{
+                    allowPracticeMode: true,
+                    showExamples: true,
+                    additionalFields: ["purpose", "timing", "whenToUseIt", "commonVariations", "pitfalls", "example"],
+                    reverseMode: true,
+                    showProgress: true,
+                    allowShuffle: true,
+                    subheaderField: "commonVariations",
+                    layout: {
+                        mainFields: ["purpose", "whenToUseIt"],
+                        secondaryFields: ["example", "pitfalls"],
+                        footerFields: ["timing"],
+                    },
+                    hideHeader: true,
+                }}
+            />
+        </FlashcardPageShell>
     );
 }

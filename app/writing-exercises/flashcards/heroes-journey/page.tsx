@@ -2,7 +2,7 @@
 
 import { FlashcardGame } from "@/app/components/flashcards/FlashcardGame";
 import heroesJourneyData from "@/data/writing-exercises/flashcards/heroes-journey.json";
-import Header from "@/app/writing-exercises/components/Header";
+import { FlashcardPageShell } from "../FlashcardPageShell";
 
 type HeroJourneyStage = {
     id: string;
@@ -35,33 +35,27 @@ export default function HeroesJourneyFlashcards() {
     }));
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
-            <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-                <Header
-                    title="The Hero's Journey Flashcards"
-                    subtitle="Master Joseph Campbell's stages of the monomyth"
-                />
-                <FlashcardGame
-                    cards={cards}
-                    title="The Hero's Journey"
-                    subtitle="Master the stages of the monomyth"
-                    config={{
-                        allowPracticeMode: true,
-                        showExamples: true,
-                        additionalFields: ["purpose", "pacing", "whenToUseIt", "commonVariations", "pitfalls"],
-                        reverseMode: true,
-                        showProgress: true,
-                        allowShuffle: true,
-                        subheaderField: "commonVariations",
-                        layout: {
-                            mainFields: ["purpose", "whenToUseIt"],
-                            secondaryFields: ["example", "pitfalls"],
-                            footerFields: ["pacing"],
-                        },
-                        hideHeader: true,
-                    }}
-                />
-            </div>
-        </div>
+        <FlashcardPageShell title="The Hero's Journey Flashcards" subtitle="Master Joseph Campbell's stages of the monomyth">
+            <FlashcardGame
+                cards={cards}
+                title="The Hero's Journey"
+                subtitle="Master the stages of the monomyth"
+                config={{
+                    allowPracticeMode: true,
+                    showExamples: true,
+                    additionalFields: ["purpose", "pacing", "whenToUseIt", "commonVariations", "pitfalls"],
+                    reverseMode: true,
+                    showProgress: true,
+                    allowShuffle: true,
+                    subheaderField: "commonVariations",
+                    layout: {
+                        mainFields: ["purpose", "whenToUseIt"],
+                        secondaryFields: ["example", "pitfalls"],
+                        footerFields: ["pacing"],
+                    },
+                    hideHeader: true,
+                }}
+            />
+        </FlashcardPageShell>
     );
 }
