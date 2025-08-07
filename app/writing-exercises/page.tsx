@@ -71,22 +71,11 @@ export default function WritingExercisesLanding() {
               </div>
             </div>
 
-            {/* Literary Device Mastery Section */}
+            {/* Writing Practice */}
             <div className="px-4 sm:px-8 pb-12 sm:pb-14 lg:pb-12 xl:pb-10">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white/95 mb-2">Literary Device Mastery</h2>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white/95 mb-2">Writing Practice</h2>
               <div className="h-px w-24 bg-gradient-to-r from-white/40 via-white/10 to-transparent rounded-full mb-4" />
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-                <Link href="/writing-exercises/flashcards/literary-devices" className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl transition-colors duration-150 ease-out hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 transform-gpu will-change-transform hover:translate-y-[-2px]">
-                  <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-150 group-hover:opacity-100 bg-gradient-to-tr from-emerald-500/10 via-lime-500/10 to-transparent" />
-                  <div className="relative flex flex-col items-center gap-2 text-center">
-                    <span className="text-3xl">📚</span>
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-1">Study</h3>
-                      <p className="text-gray-300 text-sm">Learn with flashcards</p>
-                    </div>
-                  </div>
-                </Link>
-
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
                 <Link href="/writing-exercises/quiz" className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl transition-colors duration-150 ease-out hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 transform-gpu will-change-transform hover:translate-y-[-2px]">
                   <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-150 group-hover:opacity-100 bg-gradient-to-tr from-purple-500/10 via-fuchsia-500/10 to-transparent" />
                   <div className="relative flex flex-col items-center gap-2 text-center">
@@ -109,6 +98,11 @@ export default function WritingExercisesLanding() {
                   </div>
                 </Link>
               </div>
+              <div className="mt-6 text-center">
+                <Link href="/flashcards" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-base font-semibold text-white/90 transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20">
+                  Browse all Flashcards
+                </Link>
+              </div>
             </div>
 
             {/* Poetry Section */}
@@ -129,56 +123,8 @@ export default function WritingExercisesLanding() {
               </div>
             </div>
 
-            {/* Flashcards Section */}
-            <div className="px-4 sm:px-8 pb-12 sm:pb-14 lg:pb-12 xl:pb-10">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white/95 mb-2">Study with Flashcards</h2>
-              <div className="h-px w-24 bg-gradient-to-r from-white/40 via-white/10 to-transparent rounded-full mb-4" />
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                <Link href="/writing-exercises/flashcards/literary-devices" className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-4 sm:p-5 backdrop-blur-xl transition-colors duration-150 ease-out hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 transform-gpu will-change-transform hover:translate-y-[-2px]">
-                  <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-150 group-hover:opacity-100 bg-gradient-to-tr from-sky-500/10 via-blue-500/10 to-transparent" />
-                  <div className="relative flex flex-col items-center gap-2 text-center">
-                    <span className="text-2xl">📚</span>
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-1">Literary Devices</h3>
-                      <p className="text-gray-300 text-xs">Master writing tools</p>
-                    </div>
-                  </div>
-                </Link>
-
-                <Link href="/writing-exercises/flashcards/heroes-journey" className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-4 sm:p-5 backdrop-blur-xl transition-colors duration-150 ease-out hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 transform-gpu will-change-transform hover:translate-y-[-2px]">
-                  <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-150 group-hover:opacity-100 bg-gradient-to-tr from-purple-500/10 via-fuchsia-500/10 to-transparent" />
-                  <div className="relative flex flex-col items-center gap-2 text-center">
-                    <span className="text-2xl">🦸</span>
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-1">Hero's Journey</h3>
-                      <p className="text-gray-300 text-xs">Study the monomyth</p>
-                    </div>
-                  </div>
-                </Link>
-
-                <Link href="/writing-exercises/flashcards/save-the-cat" className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-4 sm:p-5 backdrop-blur-xl transition-colors duration-150 ease-out hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 transform-gpu will-change-transform hover:translate-y-[-2px]">
-                  <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-150 group-hover:opacity-100 bg-gradient-to-tr from-emerald-500/10 via-lime-500/10 to-transparent" />
-                  <div className="relative flex flex-col items-center gap-2 text-center">
-                    <span className="text-2xl">🐱</span>
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-1">Save the Cat!</h3>
-                      <p className="text-gray-300 text-xs">Learn screenplay beats</p>
-                    </div>
-                  </div>
-                </Link>
-
-                <Link href="/writing-exercises/flashcards/storytelling" className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-4 sm:p-5 backdrop-blur-xl transition-colors duration-150 ease-out hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 transform-gpu will-change-transform hover:translate-y-[-2px]">
-                  <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-150 group-hover:opacity-100 bg-gradient-to-tr from-orange-500/10 via-amber-500/10 to-transparent" />
-                  <div className="relative flex flex-col items-center gap-2 text-center">
-                    <span className="text-2xl">📖</span>
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-1">Storytelling</h3>
-                      <p className="text-gray-300 text-xs">Core narrative concepts</p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
+            {/* Flashcards link */}
+            {/* The grid of flashcard links moved to /flashcards hub */}
 
             {/* Tools Section */}
             <div className="px-4 sm:px-8 pb-14 sm:pb-16 lg:pb-14 xl:pb-12 2xl:pb-12">

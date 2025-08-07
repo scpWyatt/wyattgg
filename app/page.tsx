@@ -44,7 +44,7 @@ const getBrandStyles = (title: string) => {
                 overlay: "from-[#5865F2]/20 via-[#8ea2ff]/10 to-transparent",
                 icon: "text-[#8ea2ff] group-hover:text-[#b2bfff]",
             } as const;
-        case "Twitter":
+        case "X":
             return {
                 overlay: "from-[#e6e6e6]/20 via-[#9ca3af]/10 to-transparent",
                 icon: "text-zinc-300 group-hover:text-white",
@@ -80,8 +80,8 @@ const externalLinks: PageInfo[] = [
         icon: DiscordIcon,
     },
     {
-        title: "Twitter",
-        description: "Follow me on Twitter",
+        title: "X",
+        description: "Follow me on X",
         url: "https://x.com/scpwyatt",
         icon: XIcon,
     },
@@ -98,61 +98,32 @@ export default function Home() {
                         {/* Soft outer glow to prevent cut-off on large screens */}
                         <div aria-hidden className="pointer-events-none absolute -inset-2 sm:-inset-3 lg:-inset-4 rounded-[1.25rem] bg-gradient-to-b from-white/10 to-transparent blur-xl opacity-30" />
                         {/* Hero Section */}
-                        <div className="px-4 sm:px-8 pt-10 sm:pt-14 pb-8 sm:pb-10 lg:pb-8 text-center">
+                        <div className="px-4 sm:px-8 pt-12 sm:pt-16 pb-10 sm:pb-12 lg:pb-10 text-center">
                             <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-zinc-300">
                                 <span className="inline-block h-2 w-2 rounded-full bg-emerald-400/90" />
                                 Voice Over • Content Creator
                             </div>
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
+                            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight mb-5">
                                 <span className="text-white/90">Welcome to </span>
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-fuchsia-400 to-purple-500">Wyatt.gg</span>
                             </h1>
-                            <p className="mx-auto max-w-2xl text-base sm:text-lg text-zinc-300/90">
+                            <p className="mx-auto max-w-2xl text-lg sm:text-xl text-zinc-300/90">
                                 Voice Over Artist, Content Creator, and lifelong game enthusiast. Explore tools, projects, and ways to connect.
                             </p>
-                            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+                            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                                 <Link
                                     href="/contact"
-                                    className="group relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 px-6 py-3 text-base font-semibold shadow-lg shadow-blue-900/40 transition-all hover:from-fuchsia-500 hover:via-purple-500 hover:to-indigo-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/50"
+                                    className="group relative inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 px-7 py-3.5 text-lg font-semibold shadow-lg shadow-blue-900/40 transition-all hover:from-fuchsia-500 hover:via-purple-500 hover:to-indigo-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/50"
                                 >
-                                    <span className="absolute -inset-1 -z-10 rounded-full opacity-30 blur-xl transition-opacity group-hover:opacity-50 bg-[radial-gradient(circle_at_30%_30%,#60a5fa,transparent_45%),radial-gradient(circle_at_70%_70%,#a78bfa,transparent_45%)]" />
+                                    <span className="absolute -inset-1 -z-10 rounded-full opacity-40 blur-2xl transition-opacity group-hover:opacity-60 bg-[radial-gradient(circle_at_30%_30%,#60a5fa,transparent_45%),radial-gradient(circle_at_70%_70%,#a78bfa,transparent_45%)]" />
                                     Get in Touch
-                                    <ArrowRightIcon className="h-5 w-5" aria-hidden="true" />
-                                </Link>
-                                <Link
-                                    href="/writing-exercises"
-                                    className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-gradient-to-r from-white/5 via-white/0 to-white/5 px-6 py-3 text-base font-semibold text-white/90 transition hover:bg-white/10 hover:from-white/10 hover:to-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
-                                >
-                                    Explore Writing Tools
+                                    <ArrowRightIcon className="h-6 w-6" aria-hidden="true" />
                                 </Link>
                             </div>
                         </div>
 
-                        {/* Featured Section */}
-                        <div className="px-4 sm:px-8 pb-12 sm:pb-14 lg:pb-12 xl:pb-10">
-                            <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white/95 mb-2">Featured</h2>
-                            <div className="h-px w-24 bg-gradient-to-r from-white/40 via-white/10 to-transparent rounded-full mb-4" />
-                            <Link
-                                href="/writing-exercises"
-                                className="group relative block rounded-xl p-[1px] bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-transparent transition-transform duration-150 ease-out transform-gpu will-change-transform hover:translate-y-[-2px]"
-                            >
-                                <div className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl">
-                                    <div className="pointer-events-none absolute -inset-24 opacity-20 blur-2xl bg-[conic-gradient(at_50%_50%,#22d3ee_0deg,#2dd4bf_90deg,#a78bfa_180deg,#f472b6_270deg,#22d3ee_360deg)]" />
-                                    <div className="flex items-center gap-4">
-                                        <div className="rounded-lg bg-emerald-400/15 p-3 ring-1 ring-inset ring-emerald-300/20">
-                                            <BookOpenIcon className="h-8 w-8 text-emerald-300" />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-lg sm:text-xl font-bold text-white mb-1">Writing Exercises</h3>
-                                            <p className="text-sm text-zinc-300">Interactive tools to sharpen your storytelling and creativity.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
-                        </div>
-
-                        {/* Connect Section */}
-                        <div className="px-4 sm:px-8 pb-14 sm:pb-16 lg:pb-14 xl:pb-12 2xl:pb-12">
+                        {/* Connect Section (moved up for prominence after hero) */}
+                        <div className="px-4 sm:px-8 pb-10 sm:pb-12 lg:pb-10 xl:pb-8">
                             <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white/95 mb-2">Connect With Me</h2>
                             <div className="h-px w-24 bg-gradient-to-r from-white/40 via-white/10 to-transparent rounded-full mb-4" />
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -177,6 +148,44 @@ export default function Home() {
                                 })}
                             </div>
                         </div>
+
+                        {/* Writing Tools (formerly Featured, visually minimized) */}
+                        <div className="px-4 sm:px-8 pb-12 sm:pb-14 lg:pb-12 xl:pb-10">
+                            <h2 className="text-base sm:text-lg lg:text-xl font-semibold tracking-tight text-white/80 mb-2">Writing Tools</h2>
+                            <div className="h-px w-16 bg-white/15 rounded-full mb-3" />
+                            <div className="grid grid-cols-1 gap-3">
+                                <Link
+                                    href="/writing-exercises"
+                                    className="group relative block rounded-lg border border-white/10 bg-white/5 p-4 sm:p-5 hover:bg-white/10 transition-colors"
+                                >
+                                    <div className="flex items-center gap-3">
+                                        <div className="rounded-md bg-emerald-400/10 p-2 ring-1 ring-inset ring-emerald-300/20">
+                                            <BookOpenIcon className="h-6 w-6 text-emerald-300" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-white font-semibold">Writing Exercises</h3>
+                                            <p className="text-xs text-zinc-400">Interactive tools to sharpen your storytelling and creativity.</p>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link
+                                    href="/flashcards"
+                                    className="group relative block rounded-lg border border-white/10 bg-white/5 p-4 sm:p-5 hover:bg-white/10 transition-colors"
+                                >
+                                    <div className="flex items-center gap-3">
+                                        <div className="rounded-md bg-sky-400/10 p-2 ring-1 ring-inset ring-sky-300/20">
+                                            <svg className="h-6 w-6 text-sky-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 6a2 2 0 012-2h7a1 1 0 010 2H6v12h12v-7a1 1 0 112 0v8a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm7.293 5.293l6-6a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414l1.293 1.293z"/></svg>
+                                        </div>
+                                        <div>
+                                            <h3 className="text-white font-semibold">Flashcards</h3>
+                                            <p className="text-xs text-zinc-400">Writing and Poetry decks in one place.</p>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* (Removed duplicate Connect With Me section) */}
                     </div>
                 </div>
             </main>
