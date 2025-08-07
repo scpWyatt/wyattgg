@@ -3,6 +3,7 @@
 import { FlashcardGame } from "@/app/components/flashcards/FlashcardGame";
 import saveTheCatData from "@/data/writing-exercises/flashcards/save-the-cat.json";
 import { FlashcardPageShell } from "../FlashcardPageShell";
+import { FLASHCARD_CONFIGS } from "../config";
 
 type SaveTheCatBeat = {
     id: string;
@@ -40,21 +41,7 @@ export default function SaveTheCatFlashcards() {
                 cards={cards}
                 title="Save the Cat!"
                 subtitle="Master the 15 essential story beats"
-                config={{
-                    allowPracticeMode: true,
-                    showExamples: true,
-                    additionalFields: ["purpose", "timing", "whenToUseIt", "commonVariations", "pitfalls", "example"],
-                    reverseMode: true,
-                    showProgress: true,
-                    allowShuffle: true,
-                    subheaderField: "commonVariations",
-                    layout: {
-                        mainFields: ["purpose", "whenToUseIt"],
-                        secondaryFields: ["example", "pitfalls"],
-                        footerFields: ["timing"],
-                    },
-                    hideHeader: true,
-                }}
+                config={FLASHCARD_CONFIGS.saveTheCat}
             />
         </FlashcardPageShell>
     );

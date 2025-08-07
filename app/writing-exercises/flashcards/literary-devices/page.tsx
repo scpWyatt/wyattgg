@@ -3,6 +3,7 @@
 import { FlashcardGame } from "@/app/components/flashcards/FlashcardGame";
 import literaryDevicesData from "@/data/writing-exercises/flashcards/literary-devices.json";
 import Header from "@/app/writing-exercises/components/Header";
+import { FLASHCARD_CONFIGS } from "../config";
 
 export default function LiteraryDevicesFlashcards() {
     // Create a type for the device data structure
@@ -54,28 +55,7 @@ export default function LiteraryDevicesFlashcards() {
                                 cards={cards}
                                 title="Literary Devices"
                                 subtitle="Master the tools of effective writing"
-                                config={{
-                                    allowPracticeMode: true,
-                                    showExamples: true,
-                                    additionalFields: [
-                                        "whyUseIt",
-                                        "howToUseIt",
-                                        "example",
-                                        "derivation",
-                                        "pronunciation",
-                                        "school",
-                                    ],
-                                    reverseMode: true,
-                                    showProgress: true,
-                                    allowShuffle: true,
-                                    subheaderField: "pronunciation",
-                                    layout: {
-                                        mainFields: ["whyUseIt", "howToUseIt"],
-                                        secondaryFields: ["example", "derivation"],
-                                        footerFields: ["school"],
-                                    },
-                                    hideHeader: true,
-                                }}
+                                config={FLASHCARD_CONFIGS.literaryDevices}
                             />
                         </div>
                     </div>

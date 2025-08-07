@@ -3,6 +3,7 @@
 import { FlashcardGame } from "@/app/components/flashcards/FlashcardGame";
 import heroesJourneyData from "@/data/writing-exercises/flashcards/heroes-journey.json";
 import { FlashcardPageShell } from "../FlashcardPageShell";
+import { FLASHCARD_CONFIGS } from "../config";
 
 type HeroJourneyStage = {
     id: string;
@@ -40,21 +41,7 @@ export default function HeroesJourneyFlashcards() {
                 cards={cards}
                 title="The Hero's Journey"
                 subtitle="Master the stages of the monomyth"
-                config={{
-                    allowPracticeMode: true,
-                    showExamples: true,
-                    additionalFields: ["purpose", "pacing", "whenToUseIt", "commonVariations", "pitfalls"],
-                    reverseMode: true,
-                    showProgress: true,
-                    allowShuffle: true,
-                    subheaderField: "commonVariations",
-                    layout: {
-                        mainFields: ["purpose", "whenToUseIt"],
-                        secondaryFields: ["example", "pitfalls"],
-                        footerFields: ["pacing"],
-                    },
-                    hideHeader: true,
-                }}
+                config={FLASHCARD_CONFIGS.heroesJourney}
             />
         </FlashcardPageShell>
     );

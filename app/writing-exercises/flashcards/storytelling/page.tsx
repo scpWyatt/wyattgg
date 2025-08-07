@@ -3,6 +3,7 @@
 import { FlashcardGame } from "@/app/components/flashcards/FlashcardGame";
 import storytellingData from "@/data/writing-exercises/flashcards/storytelling.json";
 import { FlashcardPageShell } from "../FlashcardPageShell";
+import { FLASHCARD_CONFIGS } from "../config";
 
 type StorytellingTerm = {
     id: string;
@@ -40,21 +41,7 @@ export default function StorytellingFlashcards() {
                 cards={cards}
                 title="Storytelling Terms"
                 subtitle="Master the fundamentals of storytelling"
-                config={{
-                    allowPracticeMode: true,
-                    showExamples: true,
-                    additionalFields: ["purpose", "howToUseIt", "pitfalls", "origin", "example", "commonVariations"],
-                    reverseMode: true,
-                    showProgress: true,
-                    allowShuffle: true,
-                    subheaderField: "commonVariations",
-                    layout: {
-                        mainFields: ["purpose", "howToUseIt"],
-                        secondaryFields: ["example", "pitfalls"],
-                        footerFields: ["origin"],
-                    },
-                    hideHeader: true,
-                }}
+                config={FLASHCARD_CONFIGS.storytelling}
             />
         </FlashcardPageShell>
     );
