@@ -89,30 +89,16 @@ const externalLinks: PageInfo[] = [
 
 export default function Home() {
     return (
-        <div className="relative min-h-screen overflow-hidden bg-neutral-950 text-white">
-            {/* Decorative background */}
-            <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
-                {/* Base colorful gradient (fallback, always visible) */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#05060b] via-[#0b1220] to-black" />
-                {/* Subtle grid */}
-                <div className="absolute inset-0 opacity-60 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:22px_22px]" />
-                {/* Conic color wash with vendor-prefixed mask fallback */}
-                <div className="absolute inset-0 opacity-30 blur-3xl bg-[conic-gradient(at_20%_20%,#0ea5e9_0deg,#8b5cf6_120deg,#f43f5e_240deg,#0ea5e9_360deg)] [mask-image:radial-gradient(ellipse_at_center,black,transparent_65%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black,transparent_65%)]" />
-                {/* Color mesh (visible without masking to ensure effect shows) */}
-                <div className="absolute inset-0 opacity-35 bg-[radial-gradient(1200px_800px_at_10%_0%,rgba(14,165,233,0.18),transparent_60%),radial-gradient(1000px_700px_at_90%_20%,rgba(168,85,247,0.16),transparent_55%),radial-gradient(1200px_900px_at_50%_100%,rgba(244,63,94,0.12),transparent_60%)]" />
-                {/* Aurora blobs */}
-                <div className="absolute -top-32 right-1/4 h-72 w-72 rounded-full bg-purple-600/20 blur-3xl" />
-                <div className="absolute -bottom-24 left-1/3 h-80 w-80 rounded-full bg-blue-600/20 blur-3xl" />
-                <div className="absolute top-1/3 -left-24 h-64 w-64 rounded-full bg-fuchsia-500/15 blur-2xl" />
-                <div className="absolute bottom-1/4 right-10 h-48 w-48 rounded-full bg-cyan-400/10 blur-2xl" />
-            </div>
+        <div className="relative text-white mg-16">
 
-            <main className="relative z-10 mx-auto max-w-6xl px-4 py-12 sm:py-20 sm:px-6 lg:px-8">
+            <main className="relative z-10 mx-auto max-w-6xl px-4 pt-12 pb-10 sm:px-6 sm:pt-16 sm:pb-12 lg:px-8 lg:pt-16 lg:pb-10 xl:pt-14 xl:pb-8 2xl:pt-12 2xl:pb-6">
                 {/* Glass panel wrapper with gradient border */}
                 <div className="relative rounded-2xl p-[1px] bg-gradient-to-b from-white/15 via-white/5 to-transparent shadow-2xl shadow-black/40">
-                    <div className="rounded-2xl bg-white/5 backdrop-blur-xl">
+                    <div className="relative rounded-2xl bg-white/5 backdrop-blur-xl overflow-visible">
+                        {/* Soft outer glow to prevent cut-off on large screens */}
+                        <div aria-hidden className="pointer-events-none absolute -inset-2 sm:-inset-3 lg:-inset-4 rounded-[1.25rem] bg-gradient-to-b from-white/10 to-transparent blur-xl opacity-30" />
                         {/* Hero Section */}
-                        <div className="px-4 sm:px-8 pt-10 sm:pt-14 pb-10 sm:pb-12 text-center">
+                        <div className="px-4 sm:px-8 pt-10 sm:pt-14 pb-8 sm:pb-10 lg:pb-8 text-center">
                             <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-zinc-300">
                                 <span className="inline-block h-2 w-2 rounded-full bg-emerald-400/90" />
                                 Voice Over • Content Creator
@@ -143,7 +129,7 @@ export default function Home() {
                         </div>
 
                         {/* Featured Section */}
-                        <div className="px-4 sm:px-8 pb-10 sm:pb-12">
+                        <div className="px-4 sm:px-8 pb-8 sm:pb-10 lg:pb-8 xl:pb-6">
                             <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Featured</h2>
                             <Link
                                 href="/writing-exercises"
@@ -165,7 +151,7 @@ export default function Home() {
                         </div>
 
                         {/* Connect Section */}
-                        <div className="px-4 sm:px-8 pb-10 sm:pb-12">
+                        <div className="px-4 sm:px-8 pb-6 sm:pb-8 lg:pb-6 xl:pb-4 2xl:pb-4">
                             <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Connect With Me</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 {externalLinks.map((link) => {

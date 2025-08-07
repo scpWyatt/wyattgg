@@ -24,7 +24,7 @@ const DiscordIcon = ({ className }: { className?: string }) => (
 export const Footer = () => {
     const year = useMemo(() => new Date().getFullYear(), []);
     return (
-        <footer className="mt-auto border-t border-white/10 bg-black/60 text-gray-300 backdrop-blur supports-[backdrop-filter]:bg-black/40">
+        <footer className="mt-auto border-t border-white/10 bg-black/50 text-gray-300 backdrop-blur supports-[backdrop-filter]:bg-black/30">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-4 md:mb-0">

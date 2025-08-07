@@ -40,7 +40,7 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/60 text-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-b border-white/10">
+    <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/30 bg-black/50 text-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-b border-white/10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
