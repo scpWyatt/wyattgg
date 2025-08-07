@@ -40,12 +40,12 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-900 text-white shadow-lg">
+    <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/60 text-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-b border-white/10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
-              <span className="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+              <span className="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-fuchsia-400 to-purple-500">
                 Wyatt.gg
               </span>
             </Link>
@@ -56,7 +56,7 @@ export const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white/30 transition-colors duration-150"
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -83,7 +83,8 @@ export const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
+      <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden border-t border-white/10 backdrop-blur bg-black/50`}
+      >
         <ClientSideNav navLinks={navLinks} externalLinks={externalLinks} mobile={true} />
       </div>
     </header>

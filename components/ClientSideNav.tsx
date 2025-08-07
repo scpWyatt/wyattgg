@@ -9,12 +9,12 @@ export const ClientSideNav = ({ navLinks, externalLinks, mobile = false }: { nav
   const pathname = usePathname();
 
   const linkClasses = mobile
-    ? "block px-3 py-2 rounded-md text-base font-medium"
-    : "px-3 py-2 rounded-md text-sm font-medium";
+    ? "block px-3 py-2 rounded-md text-base font-medium transition-colors duration-150"
+    : "px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150";
 
-  const activeLinkClasses = "bg-gray-800 text-white";
-  const inactiveLinkClasses = "text-gray-300 hover:bg-gray-700 hover:text-white";
-  const externalLinkClasses = "text-gray-400 hover:text-gray-200 text-sm font-normal";
+  const activeLinkClasses = "bg-white/10 text-white";
+  const inactiveLinkClasses = "text-gray-300 hover:bg-white/10 hover:text-white";
+  const externalLinkClasses = "text-gray-400 hover:text-gray-100 text-sm font-normal";
 
   return (
     <nav className={mobile ? "px-2 pt-2 pb-3 space-y-1" : "flex items-center space-x-4"}>

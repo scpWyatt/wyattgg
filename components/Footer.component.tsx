@@ -24,31 +24,31 @@ const DiscordIcon = ({ className }: { className?: string }) => (
 export const Footer = () => {
     const year = useMemo(() => new Date().getFullYear(), []);
     return (
-        <footer className="bg-gray-900 text-gray-300 py-8 mt-auto">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <footer className="mt-auto border-t border-white/10 bg-black/60 text-gray-300 backdrop-blur supports-[backdrop-filter]:bg-black/40">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-4 md:mb-0">
                         <Link
                             href="/"
-                            className="text-2xl font-bold text-white hover:text-gray-200 transition duration-150"
+                            className="text-2xl font-bold text-white hover:text-gray-100 transition-colors duration-150"
                         >
                             Wyatt.gg
                         </Link>
                     </div>
                     <nav>
-                        <Link href="/contact" className="hover:text-white transition duration-150">
+                        <Link href="/contact" className="hover:text-white transition-colors duration-150">
                             Contact
                         </Link>
                     </nav>
                 </div>
-                <div className="mt-8 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div className="mt-8 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
                     <p className="text-sm">&copy; {year} Wyatt.gg. All rights reserved.</p>
                     <div className="mt-4 md:mt-0 flex space-x-6">
                         <a
                             href="https://youtube.com/scpWyatt"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-400 hover:text-white transition duration-150"
+                            className="text-gray-400 hover:text-white transition-colors duration-150"
                         >
                             <span className="sr-only">YouTube</span>
                             <YouTubeIcon className="h-6 w-6" />
@@ -57,7 +57,7 @@ export const Footer = () => {
                             href="https://discord.gg/scpWyatt"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-400 hover:text-white transition duration-150"
+                            className="text-gray-400 hover:text-white transition-colors duration-150"
                         >
                             <span className="sr-only">Discord</span>
                             <DiscordIcon className="h-6 w-6" />
@@ -66,7 +66,7 @@ export const Footer = () => {
                             href="https://x.com/scpwyatt"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-400 hover:text-white transition duration-150"
+                            className="text-gray-400 hover:text-white transition-colors duration-150"
                         >
                             <span className="sr-only">Twitter</span>
                             <XIcon className="h-6 w-6" />

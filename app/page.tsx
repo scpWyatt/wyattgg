@@ -147,7 +147,7 @@ export default function Home() {
                             <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Featured</h2>
                             <Link
                                 href="/writing-exercises"
-                                className="group relative block rounded-xl p-[1px] bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-transparent transition-transform duration-300 hover:translate-y-[-2px]"
+                                className="group relative block rounded-xl p-[1px] bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-transparent transition-transform duration-150 ease-out transform-gpu will-change-transform hover:translate-y-[-2px]"
                             >
                                 <div className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl">
                                     <div className="pointer-events-none absolute -inset-24 opacity-20 blur-2xl bg-[conic-gradient(at_50%_50%,#22d3ee_0deg,#2dd4bf_90deg,#a78bfa_180deg,#f472b6_270deg,#22d3ee_360deg)]" />
@@ -176,11 +176,11 @@ export default function Home() {
                                             href={link.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 transition-all duration-300 hover:bg-white/10 hover:shadow-xl hover:shadow-black/30"
+                                            className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 transition-colors duration-150 ease-out hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 transform-gpu will-change-transform hover:translate-y-[-1px]"
                                         >
-                                            <div className={`pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-tr ${brand.overlay}`} />
+                                            <div className={`pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-150 group-hover:opacity-100 bg-gradient-to-tr ${brand.overlay}`} />
                                             <div className="relative flex flex-col items-center text-center">
-                                                <link.icon className={`h-8 w-8 mb-2 transition-colors ${brand.icon}`} />
+                                                <link.icon className={`h-8 w-8 mb-2 transition-colors duration-150 ${brand.icon}`} />
                                                 <h3 className="font-semibold text-white">{link.title}</h3>
                                                 <p className="text-sm text-zinc-400">{link.description}</p>
                                             </div>
