@@ -1,3 +1,4 @@
+"use client";
 /* global setTimeout */
 import { useReducer, useState } from "react";
 import {

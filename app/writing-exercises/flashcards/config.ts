@@ -1,6 +1,13 @@
 import { FlashcardGameConfig } from "@/app/components/flashcards/types";
 
-type SetKey = "literaryDevices" | "heroesJourney" | "saveTheCat" | "storytelling";
+type SetKey =
+  | "literaryDevices"
+  | "heroesJourney"
+  | "saveTheCat"
+  | "storytelling"
+  | "poets"
+  | "poems"
+  | "poeticTerms";
 
 export const FLASHCARD_CONFIGS: Record<SetKey, FlashcardGameConfig> = {
   literaryDevices: {
@@ -67,6 +74,75 @@ export const FLASHCARD_CONFIGS: Record<SetKey, FlashcardGameConfig> = {
       mainFields: ["purpose", "howToUseIt"],
       secondaryFields: ["example", "pitfalls"],
       footerFields: ["origin"],
+    },
+    hideHeader: true,
+  },
+  poets: {
+    allowPracticeMode: true,
+    showExamples: false,
+    additionalFields: [
+      "bio",
+      "notableWorks",
+      "lifeEvents",
+      "nationality",
+      "literaryMovement",
+      "dates",
+    ],
+    reverseMode: true,
+    showProgress: true,
+    allowShuffle: true,
+    subheaderField: "dates",
+    layout: {
+      mainFields: ["bio", "notableWorks"],
+      secondaryFields: ["lifeEvents"],
+      footerFields: ["nationality", "literaryMovement", "dates"],
+    },
+    hideHeader: true,
+  },
+  poems: {
+    allowPracticeMode: true,
+    showExamples: true,
+    additionalFields: [
+      "author",
+      "excerpt",
+      "poemType",
+      "meter",
+      "rhymeScheme",
+      "subjects",
+      "themes",
+      "lineCount",
+      "dateOfPublication",
+    ],
+    reverseMode: true,
+    showProgress: true,
+    allowShuffle: true,
+    subheaderField: "author",
+    layout: {
+      mainFields: ["author", "poemType"],
+      secondaryFields: ["excerpt", "meter"],
+      footerFields: ["dateOfPublication", "lineCount"],
+    },
+    hideHeader: true,
+  },
+  poeticTerms: {
+    allowPracticeMode: true,
+    showExamples: true,
+    additionalFields: [
+      "pronunciation",
+      "example",
+      "whyUseIt",
+      "howToUseIt",
+      "etymology",
+      "category",
+    ],
+    reverseMode: true,
+    showProgress: true,
+    allowShuffle: true,
+    subheaderField: "pronunciation",
+    layout: {
+      mainFields: ["whyUseIt", "howToUseIt"],
+      secondaryFields: ["example", "etymology"],
+      footerFields: ["category"],
     },
     hideHeader: true,
   },
