@@ -67,6 +67,7 @@ export default function FlashcardStart({ title, subtitle, onBegin, config, hideH
                         />
                     </button>
                 )}
+                {/* Back to Deck Intro is shown only after deck start; not here */}
             </div>
 
             {/* Instructions Card */}

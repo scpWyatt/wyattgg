@@ -105,23 +105,7 @@ export default function WritingExercisesLanding() {
               </div>
             </div>
 
-            {/* Poetry Section */}
-            <div className="px-4 sm:px-8 pb-12 sm:pb-14 lg:pb-12 xl:pb-10">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white/95 mb-2">Poetry Studies</h2>
-              <div className="h-px w-24 bg-gradient-to-r from-white/40 via-white/10 to-transparent rounded-full mb-4" />
-              <div className="flex justify-center">
-                <Link href="/poetry" className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl transition-colors duration-150 ease-out hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 transform-gpu will-change-transform hover:translate-y-[-2px] max-w-xl w-full">
-                  <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-150 group-hover:opacity-100 bg-gradient-to-tr from-pink-500/10 via-purple-500/10 to-transparent" />
-                  <div className="relative flex items-center gap-3 justify-center">
-                    <span className="text-3xl">📜</span>
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-1">Poetry Flashcards</h3>
-                      <p className="text-gray-300 text-sm">Study poets, poems, and poetic terms</p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
+            {/* Poetry Section removed; use /flashcards hub */}
 
             {/* Flashcards link */}
             {/* The grid of flashcard links moved to /flashcards hub */}

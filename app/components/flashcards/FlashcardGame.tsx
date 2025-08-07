@@ -217,6 +217,13 @@ export default function FlashcardGame({ cards, title, subtitle, config = {} }: F
         <div className="">
             {/* Top section */}
             <div className="flex justify-between items-center mb-4">
+                <a
+                    href="#"
+                    onClick={(e) => { e.preventDefault(); window.location.reload(); }}
+                    className="hidden sm:inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-white/90 hover:bg-white/10"
+                >
+                    Back to Deck Intro
+                </a>
                 <div className="text-zinc-300 text-sm sm:text-base">
                     {state.isInPracticeMode
                         ? `Reviewing card ${state.currentIndex + 1} of ${state.deck.length}`

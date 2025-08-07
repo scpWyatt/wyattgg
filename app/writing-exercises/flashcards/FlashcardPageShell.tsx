@@ -1,4 +1,5 @@
 import Header from "@/app/writing-exercises/components/Header";
+import Link from "next/link";
 import { ReactNode } from "react";
 
 export function FlashcardPageShell({ title, subtitle, children }: { title: string; subtitle?: string; children: ReactNode }) {
@@ -11,6 +12,11 @@ export function FlashcardPageShell({ title, subtitle, children }: { title: strin
 
             <div className="px-4 sm:px-8 pt-10 sm:pt-14 pb-6 sm:pb-8 lg:pb-6">
               <Header title={title} subtitle={subtitle} />
+              <div className="mt-3 text-center">
+                <Link href="/flashcards" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/90 transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20">
+                  Back to Flashcards Hub
+                </Link>
+              </div>
             </div>
 
             <div className="px-4 sm:px-8 pb-12 sm:pb-14 lg:pb-12 xl:pb-10">

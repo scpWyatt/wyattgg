@@ -27,7 +27,7 @@ type NavLink = { url: string; text: string; icon?: React.ComponentType<{ classNa
 const navLinks: NavLink[] = [
   { url: "/", text: "Home" },
   { url: "/writing-exercises", text: "Writing Exercises" },
-  { url: "/poetry", text: "Poetry" },
+  { url: "/flashcards", text: "Flashcards" },
 ];
 
 const externalLinks: NavLink[] = [

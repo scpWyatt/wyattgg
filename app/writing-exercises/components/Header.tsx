@@ -10,7 +10,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
         <div className="relative mb-6 sm:mb-10">
             <div className="flex items-center justify-between mb-4">
                 <Link 
-                    href="/writing-exercises" 
+                    href="/flashcards" 
                     className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 
                              px-4 py-2 rounded-lg hover:bg-white/10 border border-white/10"
                 >
@@ -27,7 +27,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
                             d="M10 19l-7-7m0 0l7-7m-7 7h18" 
                         />
                     </svg>
-                    <span className="text-sm font-medium">Back to Writing Exercises</span>
+                    <span className="text-sm font-medium">Back to Flashcards Hub</span>
                 </Link>
             </div>
             <div className="text-center">

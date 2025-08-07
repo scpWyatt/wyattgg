@@ -62,8 +62,12 @@ export default function Contact() {
                   </div>
                   <CopyEmailButton />
                 </div>
-                <div className="mt-3 break-all text-sky-300/90">
-                  <a href="mailto:wyatt@wyatt.gg" className="hover:text-sky-200 transition-colors duration-150">
+                <div className="mt-4 text-center">
+                  <a
+                    href="mailto:wyatt@wyatt.gg"
+                    className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-2 text-base font-semibold text-sky-200 hover:text-white hover:bg-sky-400/20 transition-colors"
+                  >
+                    <span className="h-2 w-2 rounded-full bg-sky-300" />
                     wyatt@wyatt.gg
                   </a>
                 </div>
