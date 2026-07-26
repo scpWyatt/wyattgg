@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 import Link from "next/link";
 import { ClientSideNav } from "./ClientSideNav";
 
@@ -26,8 +26,7 @@ type NavLink = { url: string; text: string; icon?: React.ComponentType<{ classNa
 
 const navLinks: NavLink[] = [
   { url: "/", text: "Home" },
-  { url: "/writing-exercises", text: "Writing Exercises" },
-  { url: "/flashcards", text: "Flashcards" },
+  { url: "/emotes", text: "Emotes" },
 ];
 
 const externalLinks: NavLink[] = [
@@ -40,27 +39,28 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/30 bg-black/50 text-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-b border-white/10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0">
-              <span className="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-fuchsia-400 to-purple-500">
-                Wyatt.gg
-              </span>
-            </Link>
-          </div>
+    <header className="sticky top-0 z-40 border-b border-white/[0.06] bg-[#06070b]/75 text-white backdrop-blur-md">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-14 items-center justify-between sm:h-16">
+          <Link href="/" className="shrink-0">
+            <span className="font-display text-xl font-semibold tracking-tight text-white transition hover:text-teal-300 sm:text-2xl">
+              Wyatt.gg
+            </span>
+          </Link>
+
           <div className="hidden md:block">
             <ClientSideNav navLinks={navLinks} externalLinks={externalLinks} />
           </div>
+
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white/30 transition-colors duration-150"
+              className="inline-flex items-center justify-center rounded-lg p-2 text-zinc-400 transition hover:bg-white/[0.06] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-300/40"
+              aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                className={`${isMenuOpen ? 'hidden' : 'block'} h-6 w-6`}
+                className={`${isMenuOpen ? "hidden" : "block"} h-5 w-5`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -70,7 +70,7 @@ export const Header = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
               <svg
-                className={`${isMenuOpen ? 'block' : 'hidden'} h-6 w-6`}
+                className={`${isMenuOpen ? "block" : "hidden"} h-5 w-5`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -83,8 +83,8 @@ export const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden border-t border-white/10 backdrop-blur bg-black/50`}
-      >
+
+      <div className={`${isMenuOpen ? "block" : "hidden"} border-t border-white/[0.06] bg-[#06070b]/95 md:hidden`}>
         <ClientSideNav navLinks={navLinks} externalLinks={externalLinks} mobile={true} />
       </div>
     </header>

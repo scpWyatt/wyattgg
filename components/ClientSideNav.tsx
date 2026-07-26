@@ -1,49 +1,91 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-type NavLink = { url: string; text: string; icon?: React.ComponentType<{ className?: string }> };
+type NavLink = {
+  url: string;
+  text: string;
+  icon?: React.ComponentType<{ className?: string }>;
+};
 
-export const ClientSideNav = ({ navLinks, externalLinks, mobile = false }: { navLinks: NavLink[], externalLinks: NavLink[], mobile?: boolean }) => {
+export const ClientSideNav = ({
+  navLinks,
+  externalLinks,
+  mobile = false,
+}: {
+  navLinks: NavLink[];
+  externalLinks: NavLink[];
+  mobile?: boolean;
+}) => {
   const pathname = usePathname();
 
-  const linkClasses = mobile
-    ? "block px-3 py-2 rounded-md text-base font-medium transition-colors duration-150"
-    : "px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150";
-
-  const activeLinkClasses = "bg-white/10 text-white";
-  const inactiveLinkClasses = "text-gray-300 hover:bg-white/10 hover:text-white";
-  const externalLinkClasses = "text-gray-400 hover:text-gray-100 text-sm font-normal";
+  if (mobile) {
+    return (
+      <nav className="space-y-1 px-3 py-3">
+        {navLinks.map((link) => {
+          const active = pathname === link.url;
+          return (
+            <Link
+              key={link.url}
+              href={link.url}
+              className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition ${
+                active
+                  ? "bg-teal-400/10 text-teal-300"
+                  : "text-zinc-300 hover:bg-white/[0.05] hover:text-white"
+              }`}
+            >
+              {link.text}
+            </Link>
+          );
+        })}
+        <div className="mt-3 flex gap-2 border-t border-white/[0.06] pt-3">
+          {externalLinks.map((link) => (
+            <a
+              key={link.url}
+              href={link.url}
+              className="inline-flex items-center justify-center rounded-lg p-2.5 text-zinc-400 transition hover:bg-white/[0.05] hover:text-white"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.icon ? <link.icon className="h-5 w-5" /> : link.text}
+              <span className="sr-only">{link.text}</span>
+            </a>
+          ))}
+        </div>
+      </nav>
+    );
+  }
 
   return (
-    <nav className={mobile ? "px-2 pt-2 pb-3 space-y-1" : "flex items-center space-x-4"}>
-      {navLinks.map((link) => (
-        <Link
-          key={link.url}
-          href={link.url}
-          className={`${linkClasses} ${
-            pathname === link.url ? activeLinkClasses : inactiveLinkClasses
-          }`}
-        >
-          {link.text}
-        </Link>
-      ))}
-      {!mobile && <span className="text-gray-500">|</span>}
-      <div className={mobile ? "mt-4 pt-4 border-t border-gray-700" : "flex space-x-4"}>
+    <nav className="flex items-center gap-1">
+      {navLinks.map((link) => {
+        const active = pathname === link.url;
+        return (
+          <Link
+            key={link.url}
+            href={link.url}
+            className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
+              active
+                ? "bg-teal-400/10 text-teal-300"
+                : "text-zinc-400 hover:bg-white/[0.05] hover:text-white"
+            }`}
+          >
+            {link.text}
+          </Link>
+        );
+      })}
+      <span className="mx-2 h-4 w-px bg-white/10" aria-hidden />
+      <div className="flex items-center gap-0.5">
         {externalLinks.map((link) => (
           <a
             key={link.url}
             href={link.url}
-            className={`${linkClasses} ${externalLinkClasses} flex items-center`}
+            className="inline-flex items-center justify-center rounded-lg p-2 text-zinc-500 transition hover:bg-white/[0.05] hover:text-white"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {link.icon ? (
-              <link.icon className="h-5 w-5" />
-            ) : (
-              link.text
-            )}
+            {link.icon ? <link.icon className="h-4 w-4" /> : link.text}
             <span className="sr-only">{link.text}</span>
           </a>
         ))}

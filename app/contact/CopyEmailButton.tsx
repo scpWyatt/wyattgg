@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { EnvelopeIcon, CheckIcon } from "@heroicons/react/24/outline";
+import { CheckIcon, DocumentDuplicateIcon } from "@heroicons/react/24/outline";
 
 export function CopyEmailButton() {
   const [copied, setCopied] = useState(false);
@@ -11,7 +11,6 @@ export function CopyEmailButton() {
       await navigator.clipboard.writeText("wyatt@wyatt.gg");
       setCopied(true);
     } catch (_) {
-      // Best-effort fallback: create a temporary textarea
       try {
         const textarea = document.createElement("textarea");
         textarea.value = "wyatt@wyatt.gg";
@@ -38,22 +37,20 @@ export function CopyEmailButton() {
     <button
       type="button"
       onClick={handleCopy}
-      className="shrink-0 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/90 transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
+      className="shrink-0 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm font-semibold text-zinc-200 transition hover:border-teal-400/30 hover:bg-teal-400/10 hover:text-teal-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-300/40"
       aria-live="polite"
     >
       {copied ? (
         <>
-          <CheckIcon className="h-4 w-4 text-emerald-300" aria-hidden="true" />
-          Copied!
+          <CheckIcon className="h-4 w-4 text-teal-300" aria-hidden="true" />
+          Copied
         </>
       ) : (
         <>
-          <EnvelopeIcon className="h-4 w-4" aria-hidden="true" />
+          <DocumentDuplicateIcon className="h-4 w-4" aria-hidden="true" />
           Copy Email
         </>
       )}
     </button>
   );
 }
-
-
