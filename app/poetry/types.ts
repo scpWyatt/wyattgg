@@ -25,17 +25,17 @@ export interface Poet {
 }
 
 // Poem-related types
-export type PoemType = 
-    | "Sonnet" 
-    | "Haiku" 
-    | "Epic" 
-    | "Ode" 
-    | "Ballad" 
-    | "Free Verse" 
-    | "Villanelle" 
-    | "Sestina" 
-    | "Limerick" 
-    | "Ghazal" 
+export type PoemType =
+    | "Sonnet"
+    | "Haiku"
+    | "Epic"
+    | "Ode"
+    | "Ballad"
+    | "Free Verse"
+    | "Villanelle"
+    | "Sestina"
+    | "Limerick"
+    | "Ghazal"
     | "Lyric"
     | "Other";
 
@@ -56,14 +56,14 @@ export interface Poem {
 }
 
 // Poetic term types
-export type PoeticTermCategory = 
-    | "Form" 
-    | "Meter" 
-    | "Rhyme" 
-    | "Figurative Language" 
-    | "Sound Devices" 
-    | "Structure" 
-    | "Movement" 
+export type PoeticTermCategory =
+    | "Form"
+    | "Meter"
+    | "Rhyme"
+    | "Figurative Language"
+    | "Sound Devices"
+    | "Structure"
+    | "Movement"
     | "Technique";
 
 export interface PoeticTerm {
@@ -85,5 +85,5 @@ export interface FlashcardState {
     isReverseMode: boolean;
     currentIndex: number;
     isInPracticeMode: boolean;
-    practiceDeck: any[];
-} 
+    practiceDeck: import("@/app/components/flashcards/types").FlashcardData[];
+}

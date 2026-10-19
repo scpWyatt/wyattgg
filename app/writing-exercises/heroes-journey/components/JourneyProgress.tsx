@@ -9,31 +9,31 @@ type JourneyProgressProps = {
 
 // Define acts and their corresponding emojis
 const acts = [
-    { 
-        name: "Departure", 
-        emoji: "🏠", 
-        stages: [1, 2, 3, 4], 
+    {
+        name: "Departure",
+        emoji: "🏠",
+        stages: [1, 2, 3, 4],
         width: 25,
         color: "from-purple-600 to-indigo-600"
     },
-    { 
-        name: "Initiation", 
-        emoji: "⚔️", 
-        stages: [5, 6, 7], 
+    {
+        name: "Initiation",
+        emoji: "⚔️",
+        stages: [5, 6, 7],
         width: 25,
         color: "from-indigo-600 to-blue-600"
     },
-    { 
-        name: "Ordeal", 
-        emoji: "🔥", 
-        stages: [8, 9], 
+    {
+        name: "Ordeal",
+        emoji: "🔥",
+        stages: [8, 9],
         width: 25,
         color: "from-blue-600 to-purple-600"
     },
-    { 
-        name: "Return", 
-        emoji: "👑", 
-        stages: [10, 11, 12], 
+    {
+        name: "Return",
+        emoji: "👑",
+        stages: [10, 11, 12],
         width: 25,
         color: "from-purple-600 to-indigo-600"
     }
@@ -50,11 +50,11 @@ export default function JourneyProgress({ currentStage, totalStages, completedSt
     }, [currentStage]);
 
     return (
-        <div className="w-full sticky top-0 bg-gray-900/95 backdrop-blur-sm p-4 rounded-lg shadow-xl z-10">
+        <div className="w-full sticky top-0 bg-gray-900/95 backdrop-blur-xs p-4 rounded-lg shadow-xl z-10">
             {/* Act Title */}
             <div className="text-center mb-4">
                 <span className="text-2xl">{currentAct.emoji}</span>
-                <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 
+                <h3 className="text-xl font-bold bg-linear-to-r from-purple-400 to-indigo-400
                              bg-clip-text text-transparent">
                     Act {acts.indexOf(currentAct) + 1}: {currentAct.name}
                 </h3>
@@ -68,7 +68,7 @@ export default function JourneyProgress({ currentStage, totalStages, completedSt
                 {/* Progress Header */}
                 <div className="flex items-center justify-between">
                     <div>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full 
+                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full
                                      text-purple-200 bg-purple-800/50">
                             Progress: {Math.round((completedStages.length / totalStages) * 100)}%
                         </span>
@@ -80,8 +80,8 @@ export default function JourneyProgress({ currentStage, totalStages, completedSt
                     {/* Act Labels */}
                     <div className="flex">
                         {acts.map((act, index) => (
-                            <div 
-                                key={index} 
+                            <div
+                                key={index}
                                 className="text-xs font-medium text-gray-400"
                                 style={{ width: `${act.width}%` }}
                             >
@@ -99,17 +99,17 @@ export default function JourneyProgress({ currentStage, totalStages, completedSt
                             <div className="w-1/4 border-r-2 border-gray-500/30 h-2" />
                             <div className="w-1/4" />
                         </div>
-                        
+
                         {/* Progress Bar */}
                         <div className="overflow-hidden h-2 flex rounded-full bg-gray-700/50">
                             {acts.map((act, index) => (
                                 <div
                                     key={index}
-                                    className={`transition-all duration-500 bg-gradient-to-r ${act.color}`}
-                                    style={{ 
+                                    className={`transition-all duration-500 bg-linear-to-r ${act.color}`}
+                                    style={{
                                         width: `${act.width}%`,
-                                        opacity: index === acts.indexOf(currentAct) 
-                                            ? 1 
+                                        opacity: index === acts.indexOf(currentAct)
+                                            ? 1
                                             : index < acts.indexOf(currentAct)
                                                 ? 0.8
                                                 : 0.3
@@ -122,16 +122,16 @@ export default function JourneyProgress({ currentStage, totalStages, completedSt
                     {/* Stage Numbers */}
                     <div className="flex">
                         {acts.map((act, actIndex) => (
-                            <div 
-                                key={actIndex} 
+                            <div
+                                key={actIndex}
                                 className="flex justify-center gap-1"
                                 style={{ width: `${act.width}%` }}
                             >
                                 {act.stages.map(stageNum => (
                                     <div
                                         key={stageNum}
-                                        className={`w-5 h-5 rounded-full flex items-center justify-center 
-                                                  text-xs font-medium transition-all duration-200 
+                                        className={`w-5 h-5 rounded-full flex items-center justify-center
+                                                  text-xs font-medium transition-all duration-200
                                                   ${stageNum === currentStage
                                                     ? "bg-purple-500 text-white"
                                                     : completedStages.includes(stageNum)

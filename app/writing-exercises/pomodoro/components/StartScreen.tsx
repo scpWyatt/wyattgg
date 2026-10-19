@@ -9,7 +9,7 @@ export default function StartScreen({ onBegin }: StartScreenProps) {
         <>
             <Header title="Pomodoro Timer" subtitle="Stay focused and productive with timed work sessions" />
 
-            <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
+            <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-xs">
                 <div className="text-center mb-8">
                     <h2 className="text-xl font-semibold text-white mb-4">How it works:</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-gray-300">
@@ -34,8 +34,8 @@ export default function StartScreen({ onBegin }: StartScreenProps) {
                 <div className="text-center">
                     <button
                         onClick={onBegin}
-                        className="px-8 py-3 bg-rose-600 text-white rounded-lg text-xl 
-                                 hover:bg-rose-700 hover:scale-105 
+                        className="px-8 py-3 bg-rose-600 text-white rounded-lg text-xl
+                                 hover:bg-rose-700 hover:scale-105
                                  transition-all duration-200"
                     >
                         Start Timer

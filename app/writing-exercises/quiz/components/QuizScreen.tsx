@@ -6,7 +6,7 @@ type QuizScreenProps = {
         device: LiteraryDevice;
         options: string[];
     };
-    // eslint-disable-next-line no-unused-vars
+
     onAnswer: (selectedAnswer: string) => void;
     progress: {
         current: number;
@@ -17,7 +17,7 @@ type QuizScreenProps = {
 
 export default function QuizScreen({ currentQuestion, onAnswer, progress }: QuizScreenProps) {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+        <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-blue-900">
             <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
                 <Header title="Literary Devices Quiz" subtitle="Test your knowledge of literary devices" />
 
@@ -38,7 +38,7 @@ export default function QuizScreen({ currentQuestion, onAnswer, progress }: Quiz
                     </div>
 
                     <h2 className="text-2xl font-bold text-white mb-6">
-                        What is the definition of "{currentQuestion.device.name}"?
+                        What is the definition of &quot;{currentQuestion.device.name}&quot;?
                     </h2>
 
                     <div className="space-y-4">
@@ -46,7 +46,7 @@ export default function QuizScreen({ currentQuestion, onAnswer, progress }: Quiz
                             <button
                                 key={index}
                                 onClick={() => onAnswer(option)}
-                                className="w-full text-left p-4 bg-gray-700 hover:bg-gray-600 
+                                className="w-full text-left p-4 bg-gray-700 hover:bg-gray-600
                                          rounded-lg transition-colors text-gray-300"
                             >
                                 {option}

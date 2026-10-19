@@ -11,8 +11,8 @@ export default function PoetryLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+        <div className="bg-linear-to-br from-gray-900 via-gray-800 to-blue-900">
             {children}
         </div>
     );
-} 
+}

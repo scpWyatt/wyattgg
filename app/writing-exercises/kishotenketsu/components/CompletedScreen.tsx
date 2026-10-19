@@ -14,15 +14,15 @@ type CompletedScreenProps = {
 
 export default function CompletedScreen({ exercise }: CompletedScreenProps) {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+        <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-blue-900">
             <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-                <Header 
-                    title="Story Complete!" 
-                    subtitle="Here's your completed Kishōtenketsu story" 
+                <Header
+                    title="Story Complete!"
+                    subtitle="Here's your completed Kishōtenketsu story"
                 />
-                
+
                 {/* Conclusion with Buttons */}
-                <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm mb-8">
+                <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-xs mb-8">
                     <p className="text-gray-300 mb-6">
                         {tutorial.tutorial.conclusion}
                     </p>
@@ -59,20 +59,20 @@ export default function CompletedScreen({ exercise }: CompletedScreenProps) {
 
                 <div className="space-y-6">
                     {/* Completed Story */}
-                    <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
+                    <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-xs">
                         <h2 className="text-2xl font-bold text-white mb-6">Your Story</h2>
                         <div className="space-y-6">
                             {exercise.storyParts.map((part, index) => (
-                                <div 
+                                <div
                                     key={index}
-                                    className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 
-                                             rounded-lg p-4 shadow-md hover:from-gray-700/40 
+                                    className="bg-linear-to-br from-gray-700/30 to-gray-800/30
+                                             rounded-lg p-4 shadow-md hover:from-gray-700/40
                                              hover:to-gray-800/40 transition-all duration-200
                                              border border-green-500/10 hover:border-green-500/20"
                                 >
-                                    <h3 className="text-lg font-medium text-green-400 mb-2 
+                                    <h3 className="text-lg font-medium text-green-400 mb-2
                                                flex items-center gap-2">
-                                        <span className="text-xs bg-green-500/10 px-2 
+                                        <span className="text-xs bg-green-500/10 px-2
                                                      py-0.5 rounded-full">
                                             Part {part.part}
                                         </span>
@@ -87,11 +87,11 @@ export default function CompletedScreen({ exercise }: CompletedScreenProps) {
                     </div>
 
                     {/* Story Structure Analysis */}
-                    <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
+                    <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-xs">
                         <h2 className="text-xl font-bold text-white mb-4">Story Structure</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {tutorial.tutorial.parts.map((part) => (
-                                <div 
+                                <div
                                     key={part.partNumber}
                                     className="bg-gray-700/50 rounded-lg p-4"
                                 >

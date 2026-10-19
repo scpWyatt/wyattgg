@@ -49,7 +49,7 @@ function ReferenceCard({ reference }: { reference: Reference }) {
                 <p className="text-gray-300 mb-4">{reference.description}</p>
                 <Link
                     href={reference.url}
-                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300"
+                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded-sm hover:bg-blue-700 transition-colors duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

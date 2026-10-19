@@ -231,7 +231,7 @@ export default function FlashcardGame({ cards, title, subtitle, config = {} }: F
                 </div>
                 <button
                     onClick={handleShuffle}
-                    className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-white 
+                    className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-white
                              hover:bg-white/10 transition-colors text-sm"
                 >
                     Shuffle Deck
@@ -243,7 +243,7 @@ export default function FlashcardGame({ cards, title, subtitle, config = {} }: F
                 {defaultConfig.allowPracticeMode && !state.isInPracticeMode && state.isRevealed && (
                     <button
                         onClick={() => handleAddToPractice(currentCard)}
-                        className="px-6 py-2 rounded-full border border-white/10 bg-white/5 text-white 
+                        className="px-6 py-2 rounded-full border border-white/10 bg-white/5 text-white
                                  hover:bg-white/10 transition-colors text-base"
                     >
                         Practice Again Later
@@ -251,7 +251,7 @@ export default function FlashcardGame({ cards, title, subtitle, config = {} }: F
                 )}
                 <button
                     onClick={state.isRevealed ? handleNext : handleReveal}
-                    className="px-6 py-2 rounded-full bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 text-white 
+                    className="px-6 py-2 rounded-full bg-linear-to-r from-sky-600 via-blue-600 to-indigo-600 text-white
                              hover:from-sky-500 hover:via-blue-500 hover:to-indigo-500 transition-colors text-base"
                 >
                     {state.isRevealed

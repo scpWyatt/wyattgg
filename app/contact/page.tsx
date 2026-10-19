@@ -15,7 +15,7 @@ export default function Contact() {
       <div className="panel">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-teal-400/50 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-teal-400/50 to-transparent"
         />
 
         <section className="panel-pad text-center reveal">
@@ -42,8 +42,8 @@ export default function Contact() {
           </div>
         </section>
 
-        <section className="border-t border-white/[0.06] px-5 pb-8 pt-2 sm:px-8 sm:pb-10 lg:px-10 reveal reveal-delay-1">
-          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5">
+        <section className="border-t border-white/6 px-5 pb-8 pt-2 sm:px-8 sm:pb-10 lg:px-10 reveal reveal-delay-1">
+          <div className="rounded-2xl border border-white/8 bg-white/3 p-5">
             <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-teal-400/20 bg-teal-400/10 text-teal-300">
                 <EnvelopeIcon className="h-5 w-5" aria-hidden="true" />

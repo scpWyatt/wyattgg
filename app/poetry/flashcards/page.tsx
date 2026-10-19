@@ -41,16 +41,16 @@ const flashcardTypes = [
 
 export default function PoetryFlashcardsPage() {
     return (
-        <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+        <div className="bg-linear-to-br from-gray-900 via-gray-800 to-blue-900">
             <div className="max-w-6xl mx-auto px-4 py-8 sm:py-16 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="mb-8">
                     <Link
-                        href="/poetry"
+                        href="/flashcards"
                         className="inline-flex items-center text-gray-300 hover:text-white transition-colors mb-4"
                     >
                         <ArrowLeftIcon className="h-5 w-5 mr-2" />
-                        Back to Poetry
+                        Back to Flashcards Hub
                     </Link>
                     <h1 className="text-4xl font-bold text-white mb-2">Poetry Flashcards</h1>
                     <p className="text-gray-300 text-lg">
@@ -63,8 +63,8 @@ export default function PoetryFlashcardsPage() {
                     {flashcardTypes.map((type) => (
                         <div
                             key={type.title}
-                            className={`bg-gradient-to-br ${type.gradient} rounded-lg p-6 border-2 ${type.borderColor} 
-                                     hover:${type.hoverGradient} hover:${type.hoverBorderColor} 
+                            className={`bg-linear-to-br ${type.gradient} rounded-lg p-6 border-2 ${type.borderColor}
+                                     hover:${type.hoverGradient} hover:${type.hoverBorderColor}
                                      transition-all transform hover:scale-[1.02] shadow-xl`}
                         >
                             <div className="text-center mb-6">
@@ -74,7 +74,7 @@ export default function PoetryFlashcardsPage() {
                             </div>
 
                             <div className="mb-6">
-                                <h3 className="text-white font-semibold mb-3">What you'll learn:</h3>
+                                <h3 className="text-white font-semibold mb-3">What you&apos;ll learn:</h3>
                                 <ul className="space-y-2">
                                     {type.features.map((feature, index) => (
                                         <li key={index} className="text-gray-300 text-sm flex items-center">
@@ -87,7 +87,7 @@ export default function PoetryFlashcardsPage() {
 
                             <Link
                                 href={type.href}
-                                className="block w-full bg-white/10 hover:bg-white/20 text-white text-center py-3 px-4 rounded-lg 
+                                className="block w-full bg-white/10 hover:bg-white/20 text-white text-center py-3 px-4 rounded-lg
                                          transition-colors duration-200 font-medium"
                             >
                                 Start Learning
@@ -121,4 +121,4 @@ export default function PoetryFlashcardsPage() {
             </div>
         </div>
     );
-} 
+}

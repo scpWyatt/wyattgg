@@ -4,7 +4,7 @@ type ProgressBarProps = {
     userAnswers: { [key: string]: string };
     deviceKeys: string[];
     furthestIndex: number;
-	// eslint-disable-next-line no-unused-vars
+
     onQuestionSelect: (index: number) => void;
 };
 

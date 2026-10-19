@@ -11,7 +11,7 @@ export default function StartScreen({ onBegin }: StartScreenProps) {
     const [expandedExample, setExpandedExample] = useState<number | null>(null);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+        <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-blue-900">
             <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
                 <Header title={tutorial.tutorial.title} subtitle={tutorial.tutorial.introduction} />
 
@@ -19,7 +19,7 @@ export default function StartScreen({ onBegin }: StartScreenProps) {
                 <div className="text-center mb-8">
                     <button
                         onClick={onBegin}
-                        className="px-8 py-3 bg-green-600 text-white rounded-lg text-xl 
+                        className="px-8 py-3 bg-green-600 text-white rounded-lg text-xl
                                  hover:bg-green-700 hover:scale-105
                                  transition-all duration-200"
                     >
@@ -29,7 +29,7 @@ export default function StartScreen({ onBegin }: StartScreenProps) {
 
                 <div className="space-y-6">
                     {/* Tutorial Section */}
-                    <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
+                    <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-xs">
                         <h2 className="text-xl font-semibold text-white mb-4">Structure Overview</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {tutorial.tutorial.parts.map((part) => (
@@ -43,7 +43,7 @@ export default function StartScreen({ onBegin }: StartScreenProps) {
                     </div>
 
                     {/* Examples Section */}
-                    <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
+                    <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-xs">
                         <h2 className="text-xl font-semibold text-white mb-4">Example Stories</h2>
                         <div className="space-y-4">
                             {examples.examples.map((example, i) => (

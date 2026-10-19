@@ -39,7 +39,7 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/[0.06] bg-[#06070b]/75 text-white backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-white/6 bg-[#06070b]/75 text-white backdrop-blur-md">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-14 items-center justify-between sm:h-16">
           <Link href="/" className="shrink-0">
@@ -55,7 +55,7 @@ export const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center rounded-lg p-2 text-zinc-400 transition hover:bg-white/[0.06] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-300/40"
+              className="inline-flex items-center justify-center rounded-lg p-2 text-zinc-400 transition hover:bg-white/6 hover:text-white focus:outline-hidden focus-visible:ring-2 focus-visible:ring-teal-300/40"
               aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
@@ -84,7 +84,7 @@ export const Header = () => {
         </div>
       </div>
 
-      <div className={`${isMenuOpen ? "block" : "hidden"} border-t border-white/[0.06] bg-[#06070b]/95 md:hidden`}>
+      <div className={`${isMenuOpen ? "block" : "hidden"} border-t border-white/6 bg-[#06070b]/95 md:hidden`}>
         <ClientSideNav navLinks={navLinks} externalLinks={externalLinks} mobile={true} />
       </div>
     </header>

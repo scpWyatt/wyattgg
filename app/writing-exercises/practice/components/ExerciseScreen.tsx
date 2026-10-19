@@ -14,9 +14,9 @@ type ExerciseScreenProps = {
         deviceKeys: string[];
         currentDeviceIndex: number;
         furthestIndex: number;
-        // eslint-disable-next-line no-unused-vars
+
         setCurrentDeviceIndex: (index: number) => void;
-        // eslint-disable-next-line no-unused-vars
+
         handleAnswerChange: (value: string) => void;
         goToNext: () => void;
         goToPrevious: () => void;
@@ -26,11 +26,11 @@ type ExerciseScreenProps = {
 
 export default function ExerciseScreen({ exercise }: ExerciseScreenProps) {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+        <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-blue-900">
             <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-                <Header 
-                    title="Literary Devices Exercise" 
-                    subtitle="Practice literary devices with example sentences" 
+                <Header
+                    title="Literary Devices Exercise"
+                    subtitle="Practice literary devices with example sentences"
                 />
                 <div className="bg-gray-800 rounded-lg p-6">
                     <ProgressBar

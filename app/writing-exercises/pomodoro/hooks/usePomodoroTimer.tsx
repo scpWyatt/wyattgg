@@ -23,9 +23,10 @@ declare global {
 }
 
 // Create audio context and sources outside the component
-const audioContext =
-    typeof window !== "undefined"
-        ? new (window.AudioContext || window.webkitAudioContext)({
+const AudioContextConstructor =
+    typeof window !== "undefined" ? window.AudioContext || window.webkitAudioContext : undefined;
+const audioContext = AudioContextConstructor
+        ? new AudioContextConstructor({
               // This might help with iOS silent mode
               sampleRate: 44100,
               latencyHint: "interactive",
@@ -150,13 +151,13 @@ export function usePomodoroTimer() {
             source.buffer = tickBuffer.current;
             source.loop = true;
             source.connect(audioContext.destination);
-            
+
             // Calculate the offset based on how much time has passed
             let offset = 0;
             if (tickStartTimeRef.current !== null) {
                 offset = (audioContext.currentTime - tickStartTimeRef.current) % tickBuffer.current.duration;
             }
-            
+
             source.start(0, offset);
             tickSourceRef.current = source;
         }
@@ -300,7 +301,7 @@ export function usePomodoroTimer() {
             if (shouldResetTimer) {
                 // Calculate time passed in seconds
                 const timePassed = getTotalTime(timerState) - timeRemaining;
-                
+
                 // Calculate new total time in seconds
                 const newTotalTime = (() => {
                     if (timerState === "POMODORO") {
@@ -312,15 +313,15 @@ export function usePomodoroTimer() {
                     }
                     return timeRemaining;
                 })();
-                
+
                 // Calculate new time remaining by subtracting the same amount of passed time
                 const newTimeRemaining = Math.max(newTotalTime - timePassed, 0);
-                
+
                 // Update the startTimeRef to maintain consistency with the timer
                 if (startTimeRef.current !== null) {
                     startTimeRef.current = Date.now() - (timePassed * 1000);
                 }
-                
+
                 setTimeRemaining(newTimeRemaining);
                 setSettings(newSettings);
             } else {

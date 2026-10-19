@@ -53,14 +53,14 @@ export default function ExerciseScreen({ exercise, setExercise, onComplete }: Ex
 
     return (
         <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-            <Header 
+            <Header
                 title="Hero's Journey Builder"
                 subtitle={`Stage ${exercise.currentStage}: ${currentStageData?.stageName}`}
             />
 
             {/* Progress Indicator - Now sticky */}
             <div className="mb-6">
-                <JourneyProgress 
+                <JourneyProgress
                     currentStage={exercise.currentStage}
                     totalStages={stages.tutorial.stages.length}
                     completedStages={exercise.storyBeats.map(beat => beat.stage)}
@@ -70,7 +70,7 @@ export default function ExerciseScreen({ exercise, setExercise, onComplete }: Ex
             {/* Two Column Layout */}
             <div className="space-y-6">
                 {/* Current Input Section */}
-                <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
+                <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-xs">
                     <div className="mb-4">
                         <h3 className="text-lg font-semibold text-white mb-2">
                             {currentStageData?.stageName}
@@ -87,41 +87,41 @@ export default function ExerciseScreen({ exercise, setExercise, onComplete }: Ex
                         value={currentInput}
                         onChange={(e) => setCurrentInput(e.target.value)}
                         placeholder="Write your story for this stage..."
-                        className="w-full h-32 bg-gray-700 text-white rounded-lg p-4 
-                                 placeholder-gray-400 focus:outline-none focus:ring-2 
+                        className="w-full h-32 bg-gray-700 text-white rounded-lg p-4
+                                 placeholder-gray-400 focus:outline-hidden focus:ring-2
                                  focus:ring-purple-500"
                     />
 
                     <button
                         onClick={handleSubmitStage}
                         disabled={!currentInput.trim()}
-                        className="mt-4 px-6 py-2 bg-gradient-to-r from-purple-600 to-indigo-700
+                        className="mt-4 px-6 py-2 bg-linear-to-r from-purple-600 to-indigo-700
                                  text-white rounded-lg font-medium
                                  hover:from-purple-500 hover:to-indigo-600
                                  disabled:opacity-50 disabled:cursor-not-allowed
                                  transition-all duration-200"
                     >
-                        {exercise.currentStage === stages.tutorial.stages.length ? 
+                        {exercise.currentStage === stages.tutorial.stages.length ?
                             "Complete Journey" : "Continue Journey"}
                     </button>
                 </div>
 
                 {/* Story So Far Section */}
                 {exercise.storyBeats.length > 0 && (
-                    <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
+                    <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-xs">
                         <h3 className="text-lg font-semibold text-purple-400 mb-4">
                             Your Journey So Far
                         </h3>
                         <div className="space-y-4">
                             {[...exercise.storyBeats].reverse().map((beat, index) => (
-                                <div 
-                                    key={index} 
-                                    className="bg-gradient-to-br from-gray-700/50 to-gray-800/50 rounded-lg p-4 
-                                             border border-purple-500/10 hover:border-purple-500/20 
+                                <div
+                                    key={index}
+                                    className="bg-linear-to-br from-gray-700/50 to-gray-800/50 rounded-lg p-4
+                                             border border-purple-500/10 hover:border-purple-500/20
                                              transition-all duration-200"
                                 >
                                     <div className="flex items-center gap-2 mb-2">
-                                        <span className="text-sm bg-purple-500/20 text-purple-300 px-2 py-1 rounded">
+                                        <span className="text-sm bg-purple-500/20 text-purple-300 px-2 py-1 rounded-sm">
                                             Stage {beat.stage}
                                         </span>
                                         <h4 className="text-white font-semibold">

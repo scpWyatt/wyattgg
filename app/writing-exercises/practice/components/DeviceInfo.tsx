@@ -14,7 +14,7 @@ export default function DeviceInfo({ device }: DeviceInfoProps) {
                 </div>
                 <p className="text-gray-300 mb-2">{device.definition}</p>
                 <p className="text-gray-400 text-sm italic mb-2">{device.derivation}</p>
-                <div className="bg-gray-700/40 rounded p-2 mb-4">
+                <div className="bg-gray-700/40 rounded-sm p-2 mb-4">
                     <p className="text-gray-400 text-sm">
                         <span className="text-yellow-400/80 font-medium">Example: </span>
                         <span className="italic">{device.example}</span>

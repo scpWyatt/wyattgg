@@ -23,7 +23,7 @@ export default function CompletedScreen({ exercise }: CompletedScreenProps) {
         : 0;
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+        <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-blue-900">
             <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
                 <Header title="Practice Complete!" />
                 <div className="bg-gray-800 rounded-lg p-8 shadow-lg">
@@ -31,14 +31,14 @@ export default function CompletedScreen({ exercise }: CompletedScreenProps) {
                     <div className="flex flex-col sm:flex-row gap-4 justify-end mb-8">
                         <button
                             onClick={exercise.exportResults}
-                            className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 
+                            className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700
                                      transition-colors w-full sm:w-auto"
                         >
                             Export Results
                         </button>
                         <button
                             onClick={exercise.restartExercise}
-                            className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700 
+                            className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700
                                      transition-colors w-full sm:w-auto"
                         >
                             Start New Practice
@@ -61,8 +61,8 @@ export default function CompletedScreen({ exercise }: CompletedScreenProps) {
                                             <span className="font-semibold">Example Sentence:</span>{" "}
                                             <span className="italic">{exercise.deviceSentences[key]}</span>
                                         </p>
-                                        <div className="bg-gray-800 rounded p-4">
-                                            <p className="text-gray-300 break-words whitespace-pre-wrap">
+                                        <div className="bg-gray-800 rounded-sm p-4">
+                                            <p className="text-gray-300 wrap-break-word whitespace-pre-wrap">
                                                 <span className="font-semibold text-sm">Your Answer:</span>{" "}
                                                 <span className="block mt-1 text-gray-500 italic">
                                                     {exercise.userAnswers[key] || "No answer provided"}

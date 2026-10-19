@@ -3,12 +3,10 @@ import React from "react";
 interface PostProps {
   children: React.ReactNode;
 }
-const Post = ({ children }: any) => {
-  let subComponentList = Object.keys(Post);
-
-  let subComponents = subComponentList.map((key) => {
+const Post = ({ children }: PostProps) => {
+  const subComponents = [Post.Header, Post.Quote, Post.Summary, Post.Body, Post.Footer].map((component) => {
     return React.Children.map(children, (child) =>
-      child.type.name === key ? child : null
+      React.isValidElement(child) && child.type === component ? child : null
     );
   });
 

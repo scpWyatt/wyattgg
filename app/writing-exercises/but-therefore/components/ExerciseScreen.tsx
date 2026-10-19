@@ -10,7 +10,7 @@ type ExerciseScreenProps = {
         totalBeats: number;
         beatsRemaining: number;
         allowUserChoice: boolean;
-		// eslint-disable-next-line no-unused-vars
+
         submitBeat: (text: string, userSelectedType?: "BUT" | "THEREFORE") => void;
     };
 };
@@ -18,11 +18,11 @@ type ExerciseScreenProps = {
 export default function ExerciseScreen({ exercise }: ExerciseScreenProps) {
     const [currentInput, setCurrentInput] = useState("");
     const [selectedType, setSelectedType] = useState<"BUT" | "THEREFORE">("BUT");
-    
+
     const handleSubmit = () => {
         if (currentInput.trim()) {
             exercise.submitBeat(
-                currentInput.trim(), 
+                currentInput.trim(),
                 exercise.allowUserChoice ? selectedType : undefined
             );
             setCurrentInput("");
@@ -30,13 +30,13 @@ export default function ExerciseScreen({ exercise }: ExerciseScreenProps) {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+        <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-blue-900">
             <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-                <Header 
-                    title="But/Therefore Story Exercise" 
-                    subtitle="Continue the story using But and Therefore beats" 
+                <Header
+                    title="But/Therefore Story Exercise"
+                    subtitle="Continue the story using But and Therefore beats"
                 />
-                
+
                 <div className="bg-gray-800 rounded-lg p-6 space-y-6">
                     {/* Progress Bar */}
                     <div className="mb-6">
@@ -82,8 +82,8 @@ export default function ExerciseScreen({ exercise }: ExerciseScreenProps) {
                                         <button
                                             onClick={() => setSelectedType("BUT")}
                                             className={`px-4 py-2 rounded-lg font-medium transition-all
-                                                ${selectedType === "BUT" 
-                                                    ? "bg-red-500 text-white" 
+                                                ${selectedType === "BUT"
+                                                    ? "bg-red-500 text-white"
                                                     : "bg-gray-600 text-gray-300 hover:bg-red-500/30"
                                                 }`}
                                         >
@@ -92,8 +92,8 @@ export default function ExerciseScreen({ exercise }: ExerciseScreenProps) {
                                         <button
                                             onClick={() => setSelectedType("THEREFORE")}
                                             className={`px-4 py-2 rounded-lg font-medium transition-all
-                                                ${selectedType === "THEREFORE" 
-                                                    ? "bg-emerald-500 text-white" 
+                                                ${selectedType === "THEREFORE"
+                                                    ? "bg-emerald-500 text-white"
                                                     : "bg-gray-600 text-gray-300 hover:bg-emerald-500/30"
                                                 }`}
                                         >
@@ -113,8 +113,8 @@ export default function ExerciseScreen({ exercise }: ExerciseScreenProps) {
                             )}
                         </div>
                         <textarea
-                            className="w-full p-3 bg-gray-800 text-white rounded-lg resize-y min-h-[100px] 
-                                     border-2 border-gray-600 focus:border-orange-400/50 focus:outline-none
+                            className="w-full p-3 bg-gray-800 text-white rounded-lg resize-y min-h-[100px]
+                                     border-2 border-gray-600 focus:border-orange-400/50 focus:outline-hidden
                                      transition-colors placeholder-gray-500"
                             value={currentInput}
                             onChange={(e) => setCurrentInput(e.target.value)}
@@ -124,7 +124,7 @@ export default function ExerciseScreen({ exercise }: ExerciseScreenProps) {
                         <button
                             onClick={handleSubmit}
                             disabled={!currentInput.trim()}
-                            className="mt-4 px-6 py-2 bg-orange-600 text-white rounded-lg 
+                            className="mt-4 px-6 py-2 bg-orange-600 text-white rounded-lg
                                      hover:bg-orange-700 transition-colors disabled:opacity-50
                                      disabled:cursor-not-allowed"
                         >

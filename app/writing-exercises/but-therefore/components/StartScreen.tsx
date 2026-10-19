@@ -7,7 +7,7 @@ type StoryLength = "short" | "standard" | "extended";
 type StoryMode = "standard" | "random" | "userChoice";
 
 type StartScreenProps = {
-	// eslint-disable-next-line no-unused-vars
+
     onBegin: (length: StoryLength, mode: StoryMode) => void;
 };
 
@@ -29,15 +29,15 @@ export default function StartScreen({ onBegin }: StartScreenProps) {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+        <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-blue-900">
             <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-                <Header 
-                    title="But/Therefore Story Exercise" 
-                    subtitle="Practice creating engaging story progressions using 'But' and 'Therefore' beats" 
+                <Header
+                    title="But/Therefore Story Exercise"
+                    subtitle="Practice creating engaging story progressions using 'But' and 'Therefore' beats"
                 />
 
                 {/* Tutorial Section */}
-                <div className="bg-gray-800/50 rounded-lg p-6 mb-6 backdrop-blur-sm">
+                <div className="bg-gray-800/50 rounded-lg p-6 mb-6 backdrop-blur-xs">
                     {/* Introduction - Always visible */}
                     <p className="text-lg text-gray-300 mb-6">
                         {tutorial.introduction}
@@ -180,9 +180,9 @@ export default function StartScreen({ onBegin }: StartScreenProps) {
 
                         <button
                             onClick={() => onBegin(selectedLength, selectedMode)}
-                            className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 
+                            className="w-full px-8 py-4 bg-linear-to-r from-blue-600 to-blue-700
                                      text-white rounded-lg text-xl font-medium
-                                     hover:from-blue-500 hover:to-blue-600 
+                                     hover:from-blue-500 hover:to-blue-600
                                      transition-all duration-200 shadow-lg"
                         >
                             Begin Exercise

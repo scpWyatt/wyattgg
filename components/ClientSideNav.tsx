@@ -32,19 +32,19 @@ export const ClientSideNav = ({
               className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition ${
                 active
                   ? "bg-teal-400/10 text-teal-300"
-                  : "text-zinc-300 hover:bg-white/[0.05] hover:text-white"
+                  : "text-zinc-300 hover:bg-white/5 hover:text-white"
               }`}
             >
               {link.text}
             </Link>
           );
         })}
-        <div className="mt-3 flex gap-2 border-t border-white/[0.06] pt-3">
+        <div className="mt-3 flex gap-2 border-t border-white/6 pt-3">
           {externalLinks.map((link) => (
             <a
               key={link.url}
               href={link.url}
-              className="inline-flex items-center justify-center rounded-lg p-2.5 text-zinc-400 transition hover:bg-white/[0.05] hover:text-white"
+              className="inline-flex items-center justify-center rounded-lg p-2.5 text-zinc-400 transition hover:bg-white/5 hover:text-white"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -68,7 +68,7 @@ export const ClientSideNav = ({
             className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
               active
                 ? "bg-teal-400/10 text-teal-300"
-                : "text-zinc-400 hover:bg-white/[0.05] hover:text-white"
+                : "text-zinc-400 hover:bg-white/5 hover:text-white"
             }`}
           >
             {link.text}
@@ -81,7 +81,7 @@ export const ClientSideNav = ({
           <a
             key={link.url}
             href={link.url}
-            className="inline-flex items-center justify-center rounded-lg p-2 text-zinc-500 transition hover:bg-white/[0.05] hover:text-white"
+            className="inline-flex items-center justify-center rounded-lg p-2 text-zinc-500 transition hover:bg-white/5 hover:text-white"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -13,13 +13,14 @@ export default function PomodoroPage() {
 
     useEffect(() => {
         const handleKeyPress = (e: globalThis.KeyboardEvent) => {
-            if (e.code === 'Space' && 
-                e.target instanceof globalThis.Element && 
+            if (e.code === 'Space' &&
+                e.target instanceof globalThis.Element &&
                 !['INPUT', 'TEXTAREA'].includes(e.target.tagName)
             ) {
                 e.preventDefault();
                 if (currentScreen === 'timer') {
-                    timer.isActive ? timer.pauseTimer() : timer.startTimer();
+                    if (timer.isActive) timer.pauseTimer();
+                    else timer.startTimer();
                 }
             }
         };
@@ -32,7 +33,7 @@ export default function PomodoroPage() {
         const minutes = Math.floor(timer.timeRemaining / 60);
         const seconds = timer.timeRemaining % 60;
         const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-        
+
         if (currentScreen === 'timer') {
             document.title = `Wyatt.gg | ${timeString}`;
         } else {

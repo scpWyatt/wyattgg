@@ -10,7 +10,7 @@ export function CopyEmailButton() {
     try {
       await navigator.clipboard.writeText("wyatt@wyatt.gg");
       setCopied(true);
-    } catch (_) {
+    } catch {
       try {
         const textarea = document.createElement("textarea");
         textarea.value = "wyatt@wyatt.gg";
@@ -21,7 +21,7 @@ export function CopyEmailButton() {
         document.execCommand("copy");
         document.body.removeChild(textarea);
         setCopied(true);
-      } catch (_) {
+      } catch {
         // ignore
       }
     }
@@ -37,7 +37,7 @@ export function CopyEmailButton() {
     <button
       type="button"
       onClick={handleCopy}
-      className="shrink-0 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm font-semibold text-zinc-200 transition hover:border-teal-400/30 hover:bg-teal-400/10 hover:text-teal-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-300/40"
+      className="shrink-0 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/4 px-4 py-2.5 text-sm font-semibold text-zinc-200 transition hover:border-teal-400/30 hover:bg-teal-400/10 hover:text-teal-200 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-teal-300/40"
       aria-live="polite"
     >
       {copied ? (

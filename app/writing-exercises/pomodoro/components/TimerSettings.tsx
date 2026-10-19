@@ -1,38 +1,31 @@
 import { TimerSettings as TimerSettingsType } from '../hooks/usePomodoroTimer';
-import { useState, useEffect } from 'react';
+import { useId, useState } from 'react';
 
 type TimerSettingsProps = {
     settings: TimerSettingsType;
-    // eslint-disable-next-line
+
     onUpdateSettings: (settings: TimerSettingsType) => void;
 };
 
 export default function TimerSettings({ settings, onUpdateSettings }: TimerSettingsProps) {
     const [localSettings, setLocalSettings] = useState(settings);
-    const [hasChanges, setHasChanges] = useState(false);
+    const [previousSettings, setPreviousSettings] = useState(settings);
 
-    // Update local settings when prop settings change
-    useEffect(() => {
+    if (settings !== previousSettings) {
+        setPreviousSettings(settings);
         setLocalSettings(settings);
-        setHasChanges(false);
-    }, [settings]);
+    }
+
+    const hasChanges = Object.entries(localSettings).some(
+        ([key, value]) => settings[key as keyof TimerSettingsType] !== value
+    );
 
     const handleChange = (key: keyof TimerSettingsType, value: number | boolean) => {
-        setLocalSettings(prev => {
-            const newSettings = {
-                ...prev,
-                [key]: value
-            };
-            setHasChanges(!Object.entries(newSettings).every(
-                ([key, value]) => settings[key as keyof TimerSettingsType] === value
-            ));
-            return newSettings;
-        });
+        setLocalSettings(prev => ({ ...prev, [key]: value }));
     };
 
     const handleSave = () => {
         onUpdateSettings(localSettings);
-        setHasChanges(false);
     };
 
     return (
@@ -72,7 +65,7 @@ export default function TimerSettings({ settings, onUpdateSettings }: TimerSetti
                                 type="checkbox"
                                 checked={localSettings.autoStartBreaks}
                                 onChange={(e) => handleChange('autoStartBreaks', e.target.checked)}
-                                className="w-4 h-4 rounded border-gray-600 text-green-500 
+                                className="w-4 h-4 rounded border-gray-600 text-green-500
                                          focus:ring-green-500 focus:ring-offset-gray-800"
                             />
                             <span className="text-gray-300">Auto-start breaks</span>
@@ -82,7 +75,7 @@ export default function TimerSettings({ settings, onUpdateSettings }: TimerSetti
                                 type="checkbox"
                                 checked={localSettings.autoStartPomodoros}
                                 onChange={(e) => handleChange('autoStartPomodoros', e.target.checked)}
-                                className="w-4 h-4 rounded border-gray-600 text-green-500 
+                                className="w-4 h-4 rounded border-gray-600 text-green-500
                                          focus:ring-green-500 focus:ring-offset-gray-800"
                             />
                             <span className="text-gray-300">Auto-start focus sessions</span>
@@ -95,9 +88,9 @@ export default function TimerSettings({ settings, onUpdateSettings }: TimerSetti
                 <button
                     onClick={handleSave}
                     disabled={!hasChanges}
-                    className={`px-4 py-2 rounded-lg transition-all duration-200 
-                              ${hasChanges 
-                                ? 'bg-green-600 text-white hover:bg-green-700' 
+                    className={`px-4 py-2 rounded-lg transition-all duration-200
+                              ${hasChanges
+                                ? 'bg-green-600 text-white hover:bg-green-700'
                                 : 'bg-gray-700 text-gray-400 cursor-not-allowed'}`}
                 >
                     {hasChanges ? 'Save Changes' : 'No Changes'}
@@ -107,25 +100,27 @@ export default function TimerSettings({ settings, onUpdateSettings }: TimerSetti
     );
 }
 
-function NumberInput({ label, value, onChange }: { 
-    label: string; 
-    value: number; 
-    // eslint-disable-next-line
+function NumberInput({ label, value, onChange }: {
+    label: string;
+    value: number;
+
     onChange: (value: number) => void;
 }) {
+    const id = useId();
     return (
         <div>
-            <label className="block text-sm font-medium text-gray-300 mb-1">
+            <label htmlFor={id} className="block text-sm font-medium text-gray-300 mb-1">
                 {label}
             </label>
             <input
+                id={id}
                 type="number"
                 min="1"
                 max="60"
                 value={value}
                 onChange={(e) => onChange(Math.max(1, Math.min(60, Number(e.target.value))))}
-                className="w-full px-3 py-2 bg-gray-700 rounded-lg text-white 
-                         border border-gray-600 focus:border-purple-400 focus:outline-none"
+                className="w-full px-3 py-2 bg-gray-700 rounded-lg text-white
+                         border border-gray-600 focus:border-purple-400 focus:outline-hidden"
             />
         </div>
     );

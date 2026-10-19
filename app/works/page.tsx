@@ -51,7 +51,7 @@ function WorkCard({ work }: { work: Work }) {
                 </p>
                 <Link
                     href={work.url}
-                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300"
+                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded-sm hover:bg-blue-700 transition-colors duration-300"
                     target="_blank"
                     rel="noreferrer"
                 >

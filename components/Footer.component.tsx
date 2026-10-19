@@ -25,7 +25,7 @@ export const Footer = () => {
   const year = useMemo(() => new Date().getFullYear(), []);
 
   return (
-    <footer className="relative z-10 mt-auto border-t border-white/[0.06] bg-[#06070b]/80 text-zinc-400 backdrop-blur-sm">
+    <footer className="relative z-10 mt-auto border-t border-white/6 bg-[#06070b]/80 text-zinc-400 backdrop-blur-xs">
       <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <Link
@@ -43,14 +43,14 @@ export const Footer = () => {
             </Link>
           </nav>
         </div>
-        <div className="mt-6 flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-6 sm:flex-row">
+        <div className="mt-6 flex flex-col items-center justify-between gap-4 border-t border-white/6 pt-6 sm:flex-row">
           <p className="text-sm text-zinc-500">&copy; {year} Wyatt.gg</p>
           <div className="flex items-center gap-1">
             <a
               href="https://youtube.com/scpWyatt"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg p-2 text-zinc-500 transition hover:bg-white/[0.05] hover:text-white"
+              className="rounded-lg p-2 text-zinc-500 transition hover:bg-white/5 hover:text-white"
             >
               <span className="sr-only">YouTube</span>
               <YouTubeIcon className="h-4 w-4" />
@@ -59,7 +59,7 @@ export const Footer = () => {
               href="https://discord.gg/scpWyatt"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg p-2 text-zinc-500 transition hover:bg-white/[0.05] hover:text-white"
+              className="rounded-lg p-2 text-zinc-500 transition hover:bg-white/5 hover:text-white"
             >
               <span className="sr-only">Discord</span>
               <DiscordIcon className="h-4 w-4" />
@@ -68,7 +68,7 @@ export const Footer = () => {
               href="https://x.com/scpwyatt"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg p-2 text-zinc-500 transition hover:bg-white/[0.05] hover:text-white"
+              className="rounded-lg p-2 text-zinc-500 transition hover:bg-white/5 hover:text-white"
             >
               <span className="sr-only">Twitter</span>
               <XIcon className="h-4 w-4" />

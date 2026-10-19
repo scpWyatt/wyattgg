@@ -35,19 +35,19 @@ export default function HeroesJourneyPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+        <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-blue-900">
             {currentScreen === "start" && (
                 <StartScreen onBegin={handleBegin} />
             )}
             {currentScreen === "exercise" && (
-                <ExerciseScreen 
+                <ExerciseScreen
                     exercise={exercise}
                     setExercise={setExercise}
                     onComplete={handleComplete}
                 />
             )}
             {currentScreen === "completed" && (
-                <CompletedScreen 
+                <CompletedScreen
                     exercise={exercise}
                     onReset={handleReset}
                 />

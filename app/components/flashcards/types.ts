@@ -36,7 +36,7 @@ export interface FlashcardCardProps {
     isRevealed: boolean;
     onReveal: () => void;
     onNext: () => void;
-    // eslint-disable-next-line
+
     onAddToPractice?: (card: FlashcardData) => void;
     isInPracticeMode?: boolean;
     currentIndex: number;
@@ -50,7 +50,7 @@ export interface FlashcardCardProps {
 export interface FlashcardStartProps {
     title: string;
     subtitle: string;
-    // eslint-disable-next-line
+
     onBegin: (reverseMode: boolean) => void;
     config: FlashcardGameConfig;
 }

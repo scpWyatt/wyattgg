@@ -6,12 +6,12 @@ interface FlashcardDebugProps {
 
 export default function FlashcardDebug({ state }: FlashcardDebugProps) {
     return (
-        <div className="mt-8 p-6 bg-gray-800/40 backdrop-blur-sm rounded-xl border border-gray-700/50">
+        <div className="mt-8 p-6 bg-gray-800/40 backdrop-blur-xs rounded-xl border border-gray-700/50">
             <h3 className="text-purple-400 font-semibold mb-4 flex items-center gap-2">
                 <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" />
                 Debug State
             </h3>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 <div className="space-y-2">
                     <p className="text-gray-400">
@@ -59,10 +59,10 @@ export default function FlashcardDebug({ state }: FlashcardDebugProps) {
                     <div className="bg-gray-900/50 p-3 rounded-lg h-[400px] overflow-y-auto
                                   scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
                         {state.deck.map((card, i) => (
-                            <p key={i} 
+                            <p key={i}
                                className={`py-0.5 ${
-                                   i === state.currentIndex 
-                                   ? "text-yellow-400 font-medium" 
+                                   i === state.currentIndex
+                                   ? "text-yellow-400 font-medium"
                                    : "text-gray-400"
                                }`}>
                                 {i+1}: {card.term}

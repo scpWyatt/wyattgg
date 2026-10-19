@@ -63,7 +63,7 @@ export default function Home() {
       <div className="panel">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-teal-400/50 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-teal-400/50 to-transparent"
         />
 
         {/* Hero */}
@@ -90,7 +90,7 @@ export default function Home() {
         </section>
 
         {/* Connect */}
-        <section className="border-t border-white/[0.06] px-5 py-8 sm:px-8 sm:py-9 lg:px-10 reveal reveal-delay-1">
+        <section className="border-t border-white/6 px-5 py-8 sm:px-8 sm:py-9 lg:px-10 reveal reveal-delay-1">
           <h2 className="section-title mb-1">Connect</h2>
           <p className="mb-5 text-sm text-zinc-500">Find me across the usual places.</p>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -111,7 +111,7 @@ export default function Home() {
         </section>
 
         {/* Emotes */}
-        <section className="border-t border-white/[0.06] px-5 pb-8 pt-8 sm:px-8 sm:pb-10 sm:pt-9 lg:px-10 reveal reveal-delay-2">
+        <section className="border-t border-white/6 px-5 pb-8 pt-8 sm:px-8 sm:pb-10 sm:pt-9 lg:px-10 reveal reveal-delay-2">
           <h2 className="section-title mb-1">Emotes</h2>
           <p className="mb-5 text-sm text-zinc-500">Channel emotes for Twitch &amp; YouTube chat.</p>
           <Link href="/emotes" className="group link-tile">

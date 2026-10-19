@@ -15,7 +15,7 @@ type PomodoroTimerProps = {
         pauseTimer: () => void;
         resetTimer: () => void;
         settings: TimerSettingsType;
-        // eslint-disable-next-line
+
         updateSettings: (settings: TimerSettingsType) => void;
         skipTimer: () => void;
     };
@@ -48,7 +48,7 @@ export default function PomodoroTimer({ timer }: PomodoroTimerProps) {
     };
 
     const colors = getStateColors();
-    
+
     return (
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-6">
             {/* Main Timer Section */}

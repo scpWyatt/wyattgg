@@ -16,7 +16,7 @@ export default function EmotesPage() {
       <div className="panel">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-teal-400/50 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-teal-400/50 to-transparent"
         />
 
         {/* Hero + Browse first */}
@@ -61,7 +61,7 @@ export default function EmotesPage() {
         </section>
 
         {/* What are emotes */}
-        <section className="border-t border-white/[0.06] px-5 py-8 sm:px-8 sm:py-9 lg:px-10 reveal reveal-delay-1">
+        <section className="border-t border-white/6 px-5 py-8 sm:px-8 sm:py-9 lg:px-10 reveal reveal-delay-1">
           <h2 className="section-title mb-3">What are emotes?</h2>
           <p className="max-w-2xl body-muted">
             Emotes are short codes you type in chat that turn into custom images or animations —
@@ -71,11 +71,11 @@ export default function EmotesPage() {
         </section>
 
         {/* How to use */}
-        <section className="border-t border-white/[0.06] px-5 py-8 sm:px-8 sm:py-9 lg:px-10 reveal reveal-delay-2">
+        <section className="border-t border-white/6 px-5 py-8 sm:px-8 sm:py-9 lg:px-10 reveal reveal-delay-2">
           <h2 className="section-title mb-4">How to use them</h2>
           <ol className="max-w-2xl space-y-4">
             <li className="flex gap-3">
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-white/10 bg-white/[0.04] font-display text-xs font-semibold text-teal-300">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-white/10 bg-white/4 font-display text-xs font-semibold text-teal-300">
                 1
               </span>
               <span className="body-muted pt-0.5">
@@ -83,7 +83,7 @@ export default function EmotesPage() {
               </span>
             </li>
             <li className="flex gap-3">
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-white/10 bg-white/[0.04] font-display text-xs font-semibold text-teal-300">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-white/10 bg-white/4 font-display text-xs font-semibold text-teal-300">
                 2
               </span>
               <span className="body-muted pt-0.5">
@@ -92,13 +92,13 @@ export default function EmotesPage() {
               </span>
             </li>
           </ol>
-          <p className="mt-5 max-w-2xl rounded-xl border border-white/[0.06] bg-white/[0.02] px-4 py-3 text-sm leading-relaxed text-zinc-500">
+          <p className="mt-5 max-w-2xl rounded-xl border border-white/6 bg-white/2 px-4 py-3 text-sm leading-relaxed text-zinc-500">
             Optional: if you want to see third-party emotes in chat yourself (not just the text
             codes), install the BetterTTV, 7TV, and/or FrankerFaceZ browser extension.
           </p>
         </section>
 
-        <div className="border-t border-white/[0.06] px-5 py-6 sm:px-8 lg:px-10 reveal reveal-delay-3">
+        <div className="border-t border-white/6 px-5 py-6 sm:px-8 lg:px-10 reveal reveal-delay-3">
           <Link href="/" className="btn-ghost">
             Back to Home
             <ArrowRightIcon className="h-4 w-4" aria-hidden="true" />

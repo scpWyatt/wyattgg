@@ -11,7 +11,8 @@ type TimerControlsProps = {
 
 export default function TimerControls({ isActive, onStart, onPause, onReset, onSkip, timerState }: TimerControlsProps) {
     const handleStartPause = () => {
-        isActive ? onPause() : onStart();
+        if (isActive) onPause();
+        else onStart();
     };
 
     const getButtonColors = () => {
@@ -45,7 +46,8 @@ export default function TimerControls({ isActive, onStart, onPause, onReset, onS
         <div className="flex justify-center items-center gap-8 mt-8">
             <button
                 onClick={onReset}
-                className="p-4 text-gray-400 rounded-full hover:bg-[#1a1a2e] 
+                aria-label="Reset timer"
+                className="p-4 text-gray-400 rounded-full hover:bg-[#1a1a2e]
                          transition-all duration-200 hover:scale-105"
             >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,17 +65,17 @@ export default function TimerControls({ isActive, onStart, onPause, onReset, onS
                 className={`w-32 h-32 rounded-full font-medium text-white
                           relative
                           flex flex-col items-center justify-center
-                          outline-none focus:outline-none 
+                          outline-hidden focus:outline-hidden
                           ${
                               isActive
                                   ? `${colors.active} translate-y-2`
                                   : `${colors.active} after:translate-y-[8px] after:shadow-[inset_0_-14px_0_rgba(0,0,0,0.2)]`
                           }
                           after:absolute after:inset-0 after:rounded-full
-                          
-                          
+
+
                           before:absolute before:inset-0 before:rounded-full
-                          
+
                           ${isActive ? "before:opacity-0" : "before:bg-white/10 before:opacity-0"}`}
             >
                 {isActive ? (
@@ -106,7 +108,8 @@ export default function TimerControls({ isActive, onStart, onPause, onReset, onS
 
             <button
                 onClick={onSkip}
-                className="p-4 text-gray-400 rounded-full hover:bg-[#1a1a2e] 
+                aria-label="Skip to next session"
+                className="p-4 text-gray-400 rounded-full hover:bg-[#1a1a2e]
                          transition-all duration-200 hover:scale-105"
             >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

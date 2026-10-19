@@ -1,5 +1,4 @@
 import { FlashcardCardProps } from "./types";
-import { useEffect, useState } from "react";
 
 function formatFieldName(field: string): string {
     const words = field.replace(/([A-Z])/g, " $1").toLowerCase();
@@ -9,23 +8,18 @@ function formatFieldName(field: string): string {
 }
 
 export default function FlashcardCard({ card, isReverseMode, config, isFlipped }: FlashcardCardProps) {
-    const [displayedCard, setDisplayedCard] = useState(card);
-
-    useEffect(() => {
-        if (!isFlipped) {
-            setDisplayedCard(card);
-        }
-    }, [card, isFlipped]);
+    // The parent delays changing the card until the flip-back animation starts.
+    const displayedCard = card;
 
     return (
         <div>
             <div className="h-[650px] sm:h-[525px] perspective-1000">
                 <div
-                    className={`relative w-full h-full transition-transform duration-700 transform-style-3d 
+                    className={`relative w-full h-full transition-transform duration-700 transform-style-3d
                                ${isFlipped ? "rotate-y-180" : ""}`}
                 >
                     {/* Front of card */}
-                    <div className="absolute w-full h-full rounded-xl p-4 sm:p-8 backface-hidden 
+                    <div className="absolute w-full h-full rounded-xl p-4 sm:p-8 backface-hidden
                                     bg-gray-800 shadow-xl border border-gray-700">
                         <div className="flex items-start sm:items-center justify-center h-full pt-8 sm:pt-0">
                             {isReverseMode ? (
@@ -49,7 +43,7 @@ export default function FlashcardCard({ card, isReverseMode, config, isFlipped }
                     </div>
 
                     {/* Back of card */}
-                    <div className="absolute w-full h-full rounded-xl shadow-xl backface-hidden rotate-y-180 
+                    <div className="absolute w-full h-full rounded-xl shadow-xl backface-hidden rotate-y-180
                                     bg-gray-800 border border-gray-700">
                         <div className="h-full overflow-y-auto p-4 sm:p-7">
                             <div className="space-y-3">

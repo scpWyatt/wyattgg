@@ -14,15 +14,15 @@ export default function StartScreen({ onBegin }: StartScreenProps) {
     const [expandedExample, setExpandedExample] = useState<number | null>(null);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+        <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-blue-900">
             <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
                 <Header
                     title="Hero's Journey Builder"
-                    subtitle="Create a compelling story outline using the classic Hero's Journey structure"
+                    subtitle="Create a compelling story outline-solid using the classic Hero's Journey structure"
                 />
 
                 {/* Tutorial Section */}
-                <div className="bg-gray-800/50 rounded-lg p-6 mb-6 backdrop-blur-sm">
+                <div className="bg-gray-800/50 rounded-lg p-6 mb-6 backdrop-blur-xs">
                     {/* Introduction - Always visible */}
                     <p className="text-lg text-gray-300 mb-6">{stages.tutorial.introduction}</p>
 
@@ -32,7 +32,7 @@ export default function StartScreen({ onBegin }: StartScreenProps) {
                             onClick={() => setIsTutorialOpen(!isTutorialOpen)}
                             className="w-full flex items-center justify-between text-white hover:text-purple-400 transition-colors"
                         >
-                            <h2 className="text-xl font-semibold">Learn More About The Hero's Journey</h2>
+                            <h2 className="text-xl font-semibold">Learn More About The Hero&apos;s Journey</h2>
                             {isTutorialOpen ? (
                                 <ChevronUpIcon className="w-6 h-6" />
                             ) : (
@@ -86,7 +86,7 @@ export default function StartScreen({ onBegin }: StartScreenProps) {
                                                     {example.stages.length > 4 && expandedExample !== i && (
                                                         <button
                                                             onClick={() => setExpandedExample(i)}
-                                                            className="text-xs sm:text-sm text-purple-400 hover:text-purple-300 
+                                                            className="text-xs sm:text-sm text-purple-400 hover:text-purple-300
                                                                      transition-colors ml-2 sm:ml-4 italic"
                                                         >
                                                             Show {example.stages.length - 4} more stages...
@@ -95,7 +95,7 @@ export default function StartScreen({ onBegin }: StartScreenProps) {
                                                     {expandedExample === i && (
                                                         <button
                                                             onClick={() => setExpandedExample(null)}
-                                                            className="text-xs sm:text-sm text-purple-400 hover:text-purple-300 
+                                                            className="text-xs sm:text-sm text-purple-400 hover:text-purple-300
                                                                      transition-colors ml-2 sm:ml-4 italic"
                                                         >
                                                             Show less
@@ -115,12 +115,12 @@ export default function StartScreen({ onBegin }: StartScreenProps) {
                 <div className="bg-gray-800 rounded-lg p-8 text-center">
                     <button
                         onClick={onBegin}
-                        className="w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-700 
+                        className="w-full px-8 py-4 bg-linear-to-r from-purple-600 to-indigo-700
                                  text-white rounded-lg text-xl font-medium
-                                 hover:from-purple-500 hover:to-indigo-600 
+                                 hover:from-purple-500 hover:to-indigo-600
                                  transition-all duration-200 shadow-lg"
                     >
-                        Begin Your Hero's Journey
+                        Begin Your Hero&apos;s Journey
                     </button>
                 </div>
             </div>

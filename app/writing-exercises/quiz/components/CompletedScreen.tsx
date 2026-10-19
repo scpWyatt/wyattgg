@@ -22,7 +22,7 @@ export default function CompletedScreen({ results, onRestart }: CompletedScreenP
     const percentage = Math.round((results.totalCorrect / results.totalQuestions) * 100);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+        <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-blue-900">
             <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
                 <Header title="Quiz Complete!" />
                 <div className="bg-gray-800 rounded-lg p-8 shadow-lg">
@@ -30,7 +30,7 @@ export default function CompletedScreen({ results, onRestart }: CompletedScreenP
                         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
                             <div className={`
                                 w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center
-                                border-4 flex-shrink-0
+                                border-4 shrink-0
                                 ${results.grade === 'A' ? 'border-green-500 text-green-400' : ''}
                                 ${results.grade === 'B' ? 'border-blue-500 text-blue-400' : ''}
                                 ${results.grade === 'C' ? 'border-yellow-500 text-yellow-400' : ''}
@@ -48,7 +48,7 @@ export default function CompletedScreen({ results, onRestart }: CompletedScreenP
                         </div>
                         <button
                             onClick={onRestart}
-                            className="px-6 py-2 bg-purple-600 text-white rounded-lg 
+                            className="px-6 py-2 bg-purple-600 text-white rounded-lg
                                      hover:bg-purple-700 transition-colors text-sm w-full sm:w-auto"
                         >
                             Try Again
